@@ -8,5 +8,9 @@ namespace Entidad
 {
     class ESala
     {
+        public int IdSala { get; set; }
+        public int IdSucursal { get; set; }
+
+        public int Capacidad { get; set; }
     }
 }

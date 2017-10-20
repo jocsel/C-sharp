@@ -8,8 +8,9 @@ namespace Entidad
 {
     class EUsuario
     {
-        public int Id_Sala { get; set; }
-        public int Id_Sucursal { get; set; }
-        public int Capacidad { get; set; }
+        public int Id_Usuario { get; set; }
+        public string  NombreUsuario { get; set; }
+        public string Contraseña { get; set; }
+        public string  TipoUsuario { get; set; }
     }
 }

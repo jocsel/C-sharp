@@ -64,6 +64,12 @@
     <Compile Include="FrmSucursal.Designer.cs">
       <DependentUpon>FrmSucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="PLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLogin.Designer.cs">
+      <DependentUpon>PLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmInicio.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSucursal.resx">
       <DependentUpon>FrmSucursal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLogin.resx">
+      <DependentUpon>PLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +126,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ubicacion-icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_Circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atomix_user31.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

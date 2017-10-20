@@ -6,11 +6,3 @@ D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll.config
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb

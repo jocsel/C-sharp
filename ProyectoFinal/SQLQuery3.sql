@@ -38,7 +38,7 @@ Nombre nvarchar(20) not null,
 Genero nvarchar(15) not null,
 Idioma nvarchar(15) not null,
 Subtitulo nvarchar(3),
-Año int,
+AÃ±o int,
 Duracion time
 )
 
@@ -66,7 +66,7 @@ create table Usuarios
 (
 Id int identity not null,
 Nombre_Usuario nvarchar(50) primary key not null,
-Contraseña nvarchar(max) not null,
+ContraseÃ±a nvarchar(max) not null,
 Tipo_De_Usuario nvarchar(15) not null
 )
 --PROCEDIMIENTOS ALMACENADOS
@@ -173,13 +173,13 @@ CREATE PROCEDURE INSERTAR_PELI
 @Genero nvarchar(15),
 @Idioma nvarchar(15),
 @Subtitulo nvarchar(3),
-@Año int,
+@AÃ±o int,
 @Duracion time
 )
 AS
 BEGIN
-INSERT INTO Pelicula (Id_Pelicula,Nombre,Genero,Idioma,Subtitulo,Año,Duracion)
-VALUES (@Id_Pelicula,@Nombre,@Genero,@Idioma,@Subtitulo,@Año,@Duracion)
+INSERT INTO Pelicula (Id_Pelicula,Nombre,Genero,Idioma,Subtitulo,AÃ±o,Duracion)
+VALUES (@Id_Pelicula,@Nombre,@Genero,@Idioma,@Subtitulo,@AÃ±o,@Duracion)
 END
 
 --PROC DE ELIMINAR PELI 
@@ -201,15 +201,15 @@ CREATE PROCEDURE ACTUALIZAR_PELI
 @Genero nvarchar(15),
 @Idioma nvarchar(15),
 @Subtitulo nvarchar(3),
-@Año int,
+@AÃ±o int,
 @Duracion time
 )
 AS BEGIN 
-UPDATE Pelicula SET Nombre=@Nombre,Genero=@Genero,Idioma=@Idioma,Subtitulo=@Subtitulo,Año=@Año,Duracion=@Duracion WHERE Id_Pelicula=@Id_Pelicula
+UPDATE Pelicula SET Nombre=@Nombre,Genero=@Genero,Idioma=@Idioma,Subtitulo=@Subtitulo,AÃ±o=@AÃ±o,Duracion=@Duracion WHERE Id_Pelicula=@Id_Pelicula
 END
 
 --PROC DE BUSCAR
-CREATE PROC BUSCAR_PELI
+CREATE PROCEDURE BUSCAR_PELI
 AS BEGIN 
 SELECT * FROM Pelicula
 END
@@ -284,12 +284,12 @@ END
 CREATE PROC INSERTAR_USUARIO
 (
 @Nombre_Usuario nvarchar(50),
-@Contraseña nvarchar(max),
+@ContraseÃ±a nvarchar(max),
 @Tipo_De_Usuario nvarchar(15)
 )
 AS BEGIN
-INSERT INTO Usuarios(Nombre_Usuario,Contraseña,Tipo_De_Usuario)
-VALUES (@Nombre_Usuario,@Contraseña,@Tipo_De_Usuario)
+INSERT INTO Usuarios(Nombre_Usuario,ContraseÃ±a,Tipo_De_Usuario)
+VALUES (@Nombre_Usuario,@ContraseÃ±a,@Tipo_De_Usuario)
 END 
 
 --PROC DE ELIMAR USUARIO
@@ -307,11 +307,11 @@ END
 CREATE PROC ACTUALIZAR_USUARIO
 (
 @Nombre_Usuario nvarchar(50),
-@Contraseña nvarchar(max),
+@ContraseÃ±a nvarchar(max),
 @Tipo_De_Usuario nvarchar(15)
 )
 AS BEGIN 
-UPDATE Usuarios SET Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario WHERE  Nombre_Usuario=@Nombre_Usuario
+UPDATE Usuarios SET ContraseÃ±a=@ContraseÃ±a,Tipo_De_Usuario=@Tipo_De_Usuario WHERE  Nombre_Usuario=@Nombre_Usuario
 END
 
 --PROC DE BUSCAR
@@ -320,6 +320,8 @@ AS BEGIN
 SELECT * FROM Usuarios
 END
 
-insert into Pelicula values ('2','Scary Movie 2','Parodia','Español Latino','No',2000,'1:30')
+insert into Pelicula values ('2','Scary Movie 2','Parodia','EspaÃ±ol Latino','No',2000,'1:30')
 select * from Pelicula
 delete from Pelicula where Id_Pelicula='1' 
+
+update Sucursal set Telefono =84121587 where Id_Sucursal =1

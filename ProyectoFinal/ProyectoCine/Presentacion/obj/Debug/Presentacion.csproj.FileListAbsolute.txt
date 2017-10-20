@@ -12,19 +12,6 @@ D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
-D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Form1.resources
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Form1.resources
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmPelicula.resources
+D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSucursal.resources
+D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmInicio.resources

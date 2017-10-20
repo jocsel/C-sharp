@@ -12,10 +12,10 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class Form1 : Form
+    public partial class FrmPelicula : Form
     {
         List<EPelicula> listaPeliculas;
-        public Form1()
+        public FrmPelicula()
         {
             InitializeComponent();
         }

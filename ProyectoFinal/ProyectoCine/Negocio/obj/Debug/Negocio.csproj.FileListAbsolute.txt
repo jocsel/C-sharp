@@ -7,12 +7,3 @@ D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.pdb
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.dll
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Negocio.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Negocio.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Datos.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Datos.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.pdb
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.dll
-H:\Clases de la UNI\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.pdb

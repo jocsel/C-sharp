@@ -25,3 +25,12 @@ D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.pdb
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.dll
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Negocio.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Negocio.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Datos.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Datos.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\bin\Debug\Entidad.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Negocio\obj\Debug\Negocio.pdb

@@ -7,21 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Datos;
-
+using Entidad;
+using Negocio;
 
 namespace Presentacion
 {
     public partial class FrmSucursal : Form
     {
+        List<ESucursal> listaSucursales;
         public FrmSucursal()
         {
             InitializeComponent();
         }
-        DSucursal sucursal = new DSucursal();
+
         private void FrmSucursal_Load(object sender, EventArgs e)
         {
-            dgvSucursal.DataSource = sucursal.mostrarSucursales();
+            try
+            {
+                actualizaSucursal();
+                dgvSucursal.DataSource = listaSucursales;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+        public void actualizaSucursal()
+        {
+            NSucursal gestionSucursal = new NSucursal();
+            listaSucursales = gestionSucursal.obtenerSucursal();
         }
     }
 }

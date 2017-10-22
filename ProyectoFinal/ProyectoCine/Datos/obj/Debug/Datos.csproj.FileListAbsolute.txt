@@ -22,3 +22,11 @@ D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll.config
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
+E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb

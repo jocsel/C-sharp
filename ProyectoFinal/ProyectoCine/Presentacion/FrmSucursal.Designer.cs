@@ -35,18 +35,19 @@
             // dgvSucursal
             // 
             this.dgvSucursal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSucursal.Location = new System.Drawing.Point(106, 96);
+            this.dgvSucursal.Location = new System.Drawing.Point(145, 69);
             this.dgvSucursal.Name = "dgvSucursal";
-            this.dgvSucursal.Size = new System.Drawing.Size(665, 251);
+            this.dgvSucursal.Size = new System.Drawing.Size(344, 180);
             this.dgvSucursal.TabIndex = 0;
             // 
             // FrmSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(865, 428);
+            this.ClientSize = new System.Drawing.Size(647, 317);
             this.Controls.Add(this.dgvSucursal);
             this.Name = "FrmSucursal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sucursal";
             this.Load += new System.EventHandler(this.FrmSucursal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).EndInit();

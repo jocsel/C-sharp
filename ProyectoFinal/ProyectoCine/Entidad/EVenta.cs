@@ -13,6 +13,5 @@ namespace Entidad
         public DateTime Hora { get; set; }
         public int NumTicket { get; set; }
         public double CostoTotal { get; set; }
- 
     }
 }

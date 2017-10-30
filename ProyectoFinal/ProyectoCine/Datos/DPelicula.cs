@@ -26,7 +26,7 @@ namespace Datos
                 while (leer.Read())
                 {
                     EPelicula datosPeli = new EPelicula();
-                    datosPeli.Id_Pelicula = leer.GetString(0);
+                    datosPeli.Id_Pelicula = leer.GetInt32(0);
                     
                     if (leer.IsDBNull(1))
                         datosPeli.Nombre = null;

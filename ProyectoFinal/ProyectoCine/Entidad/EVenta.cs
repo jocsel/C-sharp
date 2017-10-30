@@ -8,7 +8,7 @@ namespace Entidad
 {
     class EVenta
     {
-        public string IdVenta { get; set; }
+        public int IdVenta { get; set; }
         public string IdCartelera { get; set; }
         public DateTime Hora { get; set; }
         public int NumTicket { get; set; }

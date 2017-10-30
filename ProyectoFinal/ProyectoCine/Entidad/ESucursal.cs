@@ -8,7 +8,7 @@ namespace Entidad
 {
     public class ESucursal
     {
-        public string Id_Sucursal { get; set; }
+        public int Id_Sucursal { get; set; }
         public string Nombre  { get; set; }
         public string Ciudad { get; set; }
         public int? Telefono { get; set; }

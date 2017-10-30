@@ -27,7 +27,7 @@ namespace Datos
                 while (leer.Read())
                 {
                     ESucursal infoSucursal = new ESucursal();
-                    infoSucursal.Id_Sucursal = leer.GetString(0);
+                    infoSucursal.Id_Sucursal = leer.GetInt32(0);
 
                     if (leer.IsDBNull(1))
                         infoSucursal.Nombre = null;

@@ -1,7 +1,7 @@
 create database DBCine on primary
 (
 name = Dbcine_fisico,
-filename = 'D:\9no cuatrimestre\POO\ProyectoFinal\DBcine.mdf',
+filename = 'D:\PortableGit\C-sharp\ProyectoFinal\DBcine.mdf',
 size = 5mb,
 filegrowth = 2mb
 )
@@ -9,7 +9,7 @@ log on
 
 (
 name = Dbcine_logico,
-filename = 'D:\9no cuatrimestre\POO\ProyectoFinal\DBcine.ldf',
+filename = 'D:\PortableGit\C-sharp\ProyectoFinal\DBcine.ldf',
 size = 5mb,
 filegrowth = 2mb
 
@@ -17,7 +17,7 @@ filegrowth = 2mb
 use DBCine
 create table Sucursal
 (
-Id_Sucursal nvarchar(4) primary key not null,
+Id_Sucursal int identity(1,1) primary key not null,
 Nombre nvarchar(20),
 Ciudad nvarchar(20) not null,
 Telefono int,
@@ -26,14 +26,14 @@ Direccion nvarchar(60) not null
 
 create table Sala
 (
-Id_Sala nvarchar(3) primary key not null,
-Id_Sucursal nvarchar(4) not null references Sucursal,
+Id_Sala int identity(1,1) primary key not null,
+Id_Sucursal int  not null references Sucursal,
 Capacidad int not null
 )
 
 create table Pelicula
 (
-Id_Pelicula nvarchar(3) primary key not null,
+Id_Pelicula int identity(1,1) primary key not null,
 Nombre nvarchar(20) not null,
 Genero nvarchar(15) not null,
 Idioma nvarchar(15) not null,
@@ -44,9 +44,9 @@ Duracion time
 
 create table Cartelera
 (
-Id_Cartelera nvarchar(3) primary key not null,
-Id_Pelicula nvarchar(3) not null references Pelicula,
-Id_Sala nvarchar(3) not null references Sala,
+Id_Cartelera int identity (1,1) primary key not null,
+Id_Pelicula int not null references Pelicula,
+Id_Sala int not null references Sala,
 Fecha Date not null,
 Hora time not null,
 Valor money not null
@@ -54,8 +54,8 @@ Valor money not null
 
 create table Venta
 (
-Id_Venta nvarchar(3) primary key not null,
-Id_Cartelera nvarchar(3) not null references Cartelera,
+Id_Venta int identity (1,1) primary key not null,
+Id_Cartelera int not null references Cartelera,
 Fecha date not null,
 Hora time not null,
 Num_ticket int not null,
@@ -64,7 +64,7 @@ Costo_total money not null
 
 create table Usuarios
 (
-Id int identity not null,
+Id int identity (1,1),
 Nombre_Usuario nvarchar(50) primary key not null,
 Contraseña nvarchar(max) not null,
 Tipo_De_Usuario nvarchar(15) not null
@@ -72,7 +72,7 @@ Tipo_De_Usuario nvarchar(15) not null
 --PROCEDIMIENTOS ALMACENADOS
 CREATE PROC INSERTAR_SUC
 (
-@Id_Sucursal nvarchar(4),
+@Id_Sucursal int,
 @Nombre nvarchar(20),
 @Ciudad nvarchar(20),
 @Telefono int,
@@ -88,7 +88,7 @@ END
 
 CREATE PROCEDURE ELIMINAR_SUC
 (
-@Id_Sucursal nvarchar(4)
+@Id_Sucursal int
  )
 AS
 BEGIN
@@ -99,7 +99,7 @@ END
 
 CREATE PROCEDURE ACTUALIZAR_SUC
 (
-@Id_Sucursal nvarchar(4),
+@Id_Sucursal int,
 @Nombre nvarchar(20),
 @Ciudad nvarchar(20),
 @Telefono int,
@@ -120,8 +120,8 @@ END
 
 CREATE PROCEDURE INSERTAR_SALA
 (
-@Id_Sala nvarchar(3),
-@Id_Sucursal nvarchar(4),
+@Id_Sala int,
+@Id_Sucursal int,
 @Capacidad int
 )
 AS 
@@ -139,7 +139,7 @@ END
 --PROC DE ELIMINAR SALA
 CREATE PROCEDURE ELIMINAR_SALA
 (
-@Id_Sala nvarchar(3)
+@Id_Sala int
 )
 AS 
 BEGIN
@@ -149,8 +149,8 @@ END
 --PROC DE ACTUALIZAR SALA
 CREATE PROCEDURE ACTUALIZAR_SALA
 (
-@Id_Sala nvarchar(3),
-@Id_Sucursal nvarchar(4),
+@Id_Sala int,
+@Id_Sucursal int,
 @Capacidad int
 )
 AS
@@ -168,7 +168,7 @@ END
 
 CREATE PROCEDURE INSERTAR_PELI
 (
-@Id_Pelicula nvarchar(3),
+@Id_Pelicula int,
 @Nombre nvarchar(20),
 @Genero nvarchar(15),
 @Idioma nvarchar(15),
@@ -186,7 +186,7 @@ END
 
 CREATE PROCEDURE ELIMINAR_PELI
 (
-@Id_Pelicula nvarchar(3)
+@Id_Pelicula int
 )
 AS BEGIN 
 DELETE FROM Pelicula WHERE Id_Pelicula=@Id_Pelicula
@@ -196,7 +196,7 @@ END
 --PROC DE ACTUALIZAR PELICULA
 CREATE PROCEDURE ACTUALIZAR_PELI
 (
-@Id_Pelicula nvarchar(3),
+@Id_Pelicula int,
 @Nombre nvarchar(20),
 @Genero nvarchar(15),
 @Idioma nvarchar(15),
@@ -217,9 +217,9 @@ END
 --PROC DE INSERTAR CARTELERA 
 CREATE PROCEDURE INSERTAR_CARTELERA
 (
-@Id_Cartelera nvarchar(3),
-@Id_Pelicula nvarchar(3),
-@Id_Sala nvarchar(3),
+@Id_Cartelera int,
+@Id_Pelicula int,
+@Id_Sala int,
 @Fecha Date,
 @Hora time,
 @Valor money 
@@ -232,7 +232,7 @@ end
 --PROC DE ELIMINAR  CARTELERA 
 CREATE PROCEDURE ELIMINAR_CARTELERA
 (
-@Id_Cartelera nvarchar(3)
+@Id_Cartelera int
 
 )
 AS BEGIN 
@@ -242,9 +242,9 @@ END
 --PRO DE ACTUALIZAR CARTELERA 
 CREATE PROCEDURE ACTUALIZAR_CARTELERA
 (
-@Id_Cartelera nvarchar(3),
-@Id_Pelicula nvarchar(3),
-@Id_Sala nvarchar(3),
+@Id_Cartelera int,
+@Id_Pelicula int,
+@Id_Sala int,
 @Fecha Date,
 @Hora time,
 @Valor money 
@@ -262,8 +262,8 @@ END
 --PROC DE INSERTAR  VENTAS 
 CREATE PROCEDURE INSERTAR_VENTAS
 (
-@Id_Venta nvarchar(3),
-@Id_Cartelera nvarchar(3),
+@Id_Venta int,
+@Id_Cartelera int,
 @Fecha date,
 @Hora time ,
 @Num_ticket int,

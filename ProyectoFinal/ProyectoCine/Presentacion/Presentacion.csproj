@@ -58,6 +58,12 @@
     <Compile Include="FrmPelicula.Designer.cs">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSala.Designer.cs">
+      <DependentUpon>FrmSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPelicula.resx">
       <DependentUpon>FrmPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSala.resx">
+      <DependentUpon>FrmSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSucursal.resx">
       <DependentUpon>FrmSucursal.cs</DependentUpon>

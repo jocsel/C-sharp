@@ -53,5 +53,15 @@ namespace Presentacion
         {
             Filtrar();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

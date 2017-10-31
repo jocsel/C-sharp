@@ -72,7 +72,7 @@ namespace Datos
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "INSERTAR_SUC";
                 comando.Parameters.AddWithValue("@Nombre",nuevoSucursal.Nombre);
-                comando.Parameters.AddWithValue("@Cuidad",nuevoSucursal.Ciudad);
+                comando.Parameters.AddWithValue("@Ciudad",nuevoSucursal.Ciudad);
                 comando.Parameters.AddWithValue("@Telefono",nuevoSucursal.Telefono);
                 comando.Parameters.AddWithValue("@Direccion",nuevoSucursal.Direccion);
                 comando.Connection = conexion;

@@ -22,5 +22,31 @@ namespace Negocio
                 throw ex;
             }
         }
+
+       public void Agregar (ESucursal nuevoSucursal)
+        {
+            try
+            {
+                if (nuevoSucursal.Nombre.Length == 0)
+                    throw new ArgumentException("Ingrese el nombre del Sucursal");
+                if (nuevoSucursal.Ciudad.Length == 0)
+                    throw new ArgumentException("Íngrese la cuidad del Sucursal");
+                if (nuevoSucursal.Direccion.Length==0)
+                    throw new ArgumentException("Ingrese la direccion del Sucursal");
+                if (nuevoSucursal.Telefono == null)
+                    throw new ArgumentException("Ingrese el numero telefonico del sucursal");
+
+                DSucursal gestionSucursal = new DSucursal();
+                gestionSucursal.Agregar(nuevoSucursal);
+
+
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+
+        }
     }
 }

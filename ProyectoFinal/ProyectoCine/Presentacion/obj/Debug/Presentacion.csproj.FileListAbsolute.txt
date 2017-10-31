@@ -71,3 +71,4 @@ E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Pre
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources

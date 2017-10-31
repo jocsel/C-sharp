@@ -58,6 +58,34 @@ namespace Datos
                 throw ex;
             }
 
+
+           
+
+        }
+
+        public void Agregar (ESucursal nuevoSucursal)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+                SqlCommand comando = new SqlCommand();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "INSERTAR_SUC";
+                comando.Parameters.AddWithValue("@Nombre",nuevoSucursal.Nombre);
+                comando.Parameters.AddWithValue("@Cuidad",nuevoSucursal.Ciudad);
+                comando.Parameters.AddWithValue("@Telefono",nuevoSucursal.Telefono);
+                comando.Parameters.AddWithValue("@Direccion",nuevoSucursal.Direccion);
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
         }
     }
 }

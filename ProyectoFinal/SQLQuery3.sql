@@ -1,7 +1,7 @@
 create database DBCine on primary
 (
 name = Dbcine_fisico,
-filename = 'D:\PortableGit\C-sharp\ProyectoFinal\DBcine.mdf',
+filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DBcine.mdf',
 size = 5mb,
 filegrowth = 2mb
 )
@@ -9,7 +9,7 @@ log on
 
 (
 name = Dbcine_logico,
-filename = 'D:\PortableGit\C-sharp\ProyectoFinal\DBcine.ldf',
+filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DBcine.ldf',
 size = 5mb,
 filegrowth = 2mb
 
@@ -69,6 +69,7 @@ Nombre_Usuario nvarchar(50) primary key not null,
 Contraseña nvarchar(max) not null,
 Tipo_De_Usuario nvarchar(15) not null
 )
+
 --PROCEDIMIENTOS ALMACENADOS
 CREATE PROC INSERTAR_SUC
 (

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
 using Negocio;
+using Datos;
 
 namespace Presentacion
 {
@@ -21,9 +22,13 @@ namespace Presentacion
             InitializeComponent();
             Deshabilitar();
         }
-
+        
         private void FrmSucursal_Load(object sender, EventArgs e)
         {
+            DSucursal sucursal = new DSucursal();
+            dgvSucursal.DataSource = sucursal.obtenerSucursal();
+            dgvSucursal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvSucursal.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             try
             {
                 actualizarSucursal();
@@ -193,6 +198,9 @@ namespace Presentacion
            
         }
 
-        
+        private void txtnombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

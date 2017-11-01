@@ -87,5 +87,55 @@ namespace Datos
                 throw ex;
             }
         }
+
+        public  void Modificar (ESucursal modificarSucursal)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+                SqlCommand comando = new SqlCommand();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "Actualizar_Suc";
+                comando.Parameters.AddWithValue("@Id_sucursal", modificarSucursal.Id_Sucursal);
+                comando.Parameters.AddWithValue("@Nombre", modificarSucursal.Nombre);
+                comando.Parameters.AddWithValue("@Ciudad", modificarSucursal.Ciudad);
+                comando.Parameters.AddWithValue("@Telefono", modificarSucursal.Telefono);
+                comando.Parameters.AddWithValue("@Direccion", modificarSucursal.Direccion);
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+
+            
+
+        }
+        public void Eliminar(ESucursal EliminarSucursal)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+                SqlCommand comando = new SqlCommand();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "ELIMINAR_SUC";
+                comando.Parameters.AddWithValue("@Id_Sucursal", EliminarSucursal.Id_Sucursal);
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex ;
+            }
+           
+        }
     }
 }

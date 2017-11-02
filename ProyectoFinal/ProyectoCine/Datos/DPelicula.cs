@@ -27,7 +27,7 @@ namespace Datos
                 {
                     EPelicula datosPeli = new EPelicula();
                     datosPeli.Id_Pelicula = leer.GetInt32(0);
-                    
+
                     if (leer.IsDBNull(1))
                         datosPeli.Nombre = null;
                     else
@@ -63,18 +63,19 @@ namespace Datos
 
         public void Agregar(EPelicula nuevaPelicula)
         {
-            try {
+            try
+            {
 
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "INSERTAR_PELI";
-                comando.Parameters.AddWithValue("@Nombre",nuevaPelicula.Nombre);
-                comando.Parameters.AddWithValue("@Genero",nuevaPelicula.Genero);
-                comando.Parameters.AddWithValue("@Idioma",nuevaPelicula.Idioma);
-                comando.Parameters.AddWithValue("@Subtitulo",nuevaPelicula.Subtitulo);
-                comando.Parameters.AddWithValue("@Año",nuevaPelicula.Año);
-                comando.Parameters.AddWithValue("@Duracion",nuevaPelicula.Duracion);
+                comando.Parameters.AddWithValue("@Nombre", nuevaPelicula.Nombre);
+                comando.Parameters.AddWithValue("@Genero", nuevaPelicula.Genero);
+                comando.Parameters.AddWithValue("@Idioma", nuevaPelicula.Idioma);
+                comando.Parameters.AddWithValue("@Subtitulo", nuevaPelicula.Subtitulo);
+                comando.Parameters.AddWithValue("@Año", nuevaPelicula.Año);
+                comando.Parameters.AddWithValue("@Duracion", nuevaPelicula.Duracion);
                 comando.Connection = conexion;
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -95,13 +96,13 @@ namespace Datos
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "ACTUALIZAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula",modificarPelicula.Id_Pelicula);
-                comando.Parameters.AddWithValue("@Nombre",modificarPelicula.Nombre);
-                comando.Parameters.AddWithValue("@Genero",modificarPelicula.Genero);
-                comando.Parameters.AddWithValue("@Idioma",modificarPelicula.Idioma);
-                comando.Parameters.AddWithValue("@Subtitulo",modificarPelicula.Subtitulo);
-                comando.Parameters.AddWithValue("@Año",modificarPelicula.Año);
-                comando.Parameters.AddWithValue("@Duracion",modificarPelicula.Duracion);
+                comando.Parameters.AddWithValue("@Id_Pelicula", modificarPelicula.Id_Pelicula);
+                comando.Parameters.AddWithValue("@Nombre", modificarPelicula.Nombre);
+                comando.Parameters.AddWithValue("@Genero", modificarPelicula.Genero);
+                comando.Parameters.AddWithValue("@Idioma", modificarPelicula.Idioma);
+                comando.Parameters.AddWithValue("@Subtitulo", modificarPelicula.Subtitulo);
+                comando.Parameters.AddWithValue("@Año", modificarPelicula.Año);
+                comando.Parameters.AddWithValue("@Duracion", modificarPelicula.Duracion);
                 comando.Connection = conexion;
                 conexion.Open();
                 comando.ExecuteNonQuery();
@@ -112,24 +113,26 @@ namespace Datos
             {
                 throw ex;
             }
-            
+
         }
 
         public void Eliminar(EPelicula eliminarPelicula)
         {
-            try {
+            try
+            {
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "ELIMINAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula",eliminarPelicula.Id_Pelicula);
+                comando.Parameters.AddWithValue("@Id_Pelicula", eliminarPelicula.Id_Pelicula);
                 comando.Connection = conexion;
                 conexion.Open();
                 comando.ExecuteNonQuery();
                 conexion.Close();
             }
 
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 throw ex;
             }

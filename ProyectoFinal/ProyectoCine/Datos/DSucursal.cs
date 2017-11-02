@@ -15,6 +15,7 @@ namespace Datos
         {
             try
             {
+                
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
 using Negocio;
-using Datos;
 
 namespace Presentacion
 {
@@ -20,16 +19,10 @@ namespace Presentacion
         public FrmPelicula()
         {
             InitializeComponent();
-            Deshabilitar();
         }
 
         private void FrmPelicula_Load(object sender, EventArgs e)
         {
-
-            DPelicula pelicula = new DPelicula();
-            dgvPeliculas.DataSource = pelicula.ObtenerListaPelicula();
-            dgvPeliculas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvPeliculas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             try
             {
                 actualizarListaPelicula();
@@ -78,7 +71,7 @@ namespace Presentacion
             btneliminar.Enabled = false;
             btnnuevo.Enabled = false;
         }
-
+       
         private void Habilitar()
         {
             txtaño.Enabled = true;
@@ -99,7 +92,6 @@ namespace Presentacion
             txtduracion.Enabled = false;
             txtaño.Enabled = false;
         }
-
         private void Limpiar()
         {
             txtaño.Text = "";
@@ -110,10 +102,46 @@ namespace Presentacion
             txtsubtitulo.Text = "";
         }
 
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            Habilitar();
+            btncancelar.Enabled = true;
+            btnguardar.Enabled = true;
+            btnmodificar.Enabled = false;
+            btnnuevo.Enabled = false;
+            btneliminar.Enabled = false;
+            modificar = true;
+        }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Seguro de querer eliminar este registro", "Pelicula", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    EPelicula borrar = new EPelicula();
+                    borrar.Id_Pelicula = Convert.ToInt32(txtnombre.Tag);
+                    NPelicula gestionPeli = new NPelicula();
+                    gestionPeli.Eliminar(borrar);
+                    Limpiar();
+                    actualizarListaPelicula();
+                    dgvPeliculas.DataSource = listaPeliculas;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            try {
-                if (modificar) {
+            try
+            {
+                if (modificar)
+                {
                     EPelicula modPelicula = new EPelicula();
                     modPelicula.Id_Pelicula = Convert.ToInt32(txtnombre.Tag.ToString());
                     modPelicula.Nombre = txtnombre.Text;
@@ -125,9 +153,10 @@ namespace Presentacion
 
                     NPelicula gestionpeli = new NPelicula();
                     gestionpeli.Modificar(modPelicula);
-                    MessageBox.Show("Se modifico correctamente","Pelicula",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Se modifico correctamente", "Pelicula", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else {
+                else
+                {
 
                     EPelicula nuevaPelicula = new EPelicula();
                     nuevaPelicula.Nombre = txtnombre.Text;
@@ -139,7 +168,7 @@ namespace Presentacion
 
                     NPelicula gestionPeliculas = new NPelicula();
                     gestionPeliculas.Agregar(nuevaPelicula);
-                    MessageBox.Show("Se guardo correctamente","Pelicula",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Se guardo correctamente", "Pelicula", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 actualizarListaPelicula();
                 dgvPeliculas.DataSource = listaPeliculas;
@@ -154,24 +183,15 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnmodificar_Click(object sender, EventArgs e)
-        {
-            Habilitar();
-            btncancelar.Enabled = true;
-            btnguardar.Enabled = true;
-            btnmodificar.Enabled = false;
-            btnnuevo.Enabled = false;
-            btneliminar.Enabled = false;
-            modificar = true;
         }
 
         private void dgvPeliculas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) {
+
+            if (e.RowIndex >= 0)
+            {
 
                 txtnombre.Tag = Convert.ToInt32(dgvPeliculas.Rows[e.RowIndex].Cells["Id_Pelicula"].Value.ToString());
                 if (dgvPeliculas.Rows[e.RowIndex].Cells["Nombre"].Value == null)
@@ -206,39 +226,7 @@ namespace Presentacion
 
                 btnmodificar.Enabled = true;
                 btneliminar.Enabled = true;
-
             }
-        }
-
-        private void btneliminar_Click(object sender, EventArgs e)
-        {
-            try {
-                if (MessageBox.Show("Seguro de querer eliminar este registro", "Pelicula", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    EPelicula borrar = new EPelicula();
-                    borrar.Id_Pelicula = Convert.ToInt32(txtnombre.Tag);
-                    NPelicula gestionPeli = new NPelicula();
-                    gestionPeli.Eliminar(borrar);
-                    Limpiar();
-                    actualizarListaPelicula();
-                    dgvPeliculas.DataSource = listaPeliculas;
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-        }
-
-        private void btncancelar_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-            btnnuevo.Enabled = true;
-            btnguardar.Enabled = false;
-            btneliminar.Enabled = false;
-            btnmodificar.Enabled = false;
         }
     }
 }

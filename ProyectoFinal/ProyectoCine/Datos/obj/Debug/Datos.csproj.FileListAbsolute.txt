@@ -30,11 +30,3 @@ E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pd
 E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
 E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll.config
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.pdb
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.dll
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
-D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb

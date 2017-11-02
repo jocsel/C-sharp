@@ -23,9 +23,11 @@ namespace Negocio
             }
         }
 
-        public void Agregar(EPelicula agregarPelicula) {
+        public void Agregar(EPelicula agregarPelicula)
+        {
 
-            try {
+            try
+            {
                 if (agregarPelicula.Nombre.Length == 0)
                     throw new ArgumentException("Ingresa el nombre de la pelicula");
                 if (agregarPelicula.Genero.Length == 0)
@@ -42,14 +44,16 @@ namespace Negocio
                 gestionPelicula.Agregar(agregarPelicula);
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
 
                 throw ex;
             }
         }
         public void Modificar(EPelicula modificarPelicula)
         {
-            try {
+            try
+            {
                 if (modificarPelicula.Nombre.Length == 0)
                     throw new ArgumentException("Ingresa el nombre de la pelicula");
                 if (modificarPelicula.Genero.Length == 0)
@@ -71,9 +75,11 @@ namespace Negocio
             }
         }
 
-        public void Eliminar(EPelicula eliminarPelicula) {
+        public void Eliminar(EPelicula eliminarPelicula)
+        {
 
-            try {
+            try
+            {
 
                 DPelicula eliminar = new DPelicula();
                 eliminar.Eliminar(eliminarPelicula);
@@ -85,3 +91,4 @@ namespace Negocio
         }
     }
 }
+

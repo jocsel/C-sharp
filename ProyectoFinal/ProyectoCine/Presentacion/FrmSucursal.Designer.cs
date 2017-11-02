@@ -108,7 +108,7 @@
             this.lbltelefono.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltelefono.Location = new System.Drawing.Point(12, 63);
             this.lbltelefono.Name = "lbltelefono";
-            this.lbltelefono.Size = new System.Drawing.Size(65, 14);
+            this.lbltelefono.Size = new System.Drawing.Size(66, 14);
             this.lbltelefono.TabIndex = 4;
             this.lbltelefono.Text = "Telefono:";
             // 
@@ -137,7 +137,6 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(207, 22);
             this.txtnombre.TabIndex = 1;
-            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
             // 
             // lblnombre
             // 

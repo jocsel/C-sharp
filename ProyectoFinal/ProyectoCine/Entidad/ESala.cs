@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    class ESala
+     public class ESala
     {
-        public int IdSala { get; set; }
-        public int IdSucursal { get; set; }
+        public int? IdSala { get; set; }
+        public int? IdSucursal { get; set; }
 
-        public int Capacidad { get; set; }
+        public int? Capacidad { get; set; }
     }
 }

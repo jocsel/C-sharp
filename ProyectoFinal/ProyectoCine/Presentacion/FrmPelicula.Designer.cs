@@ -79,9 +79,9 @@
             // dgvPeliculas
             // 
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(124, 246);
+            this.dgvPeliculas.Location = new System.Drawing.Point(9, 246);
             this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.Size = new System.Drawing.Size(552, 182);
+            this.dgvPeliculas.Size = new System.Drawing.Size(781, 182);
             this.dgvPeliculas.TabIndex = 2;
             this.dgvPeliculas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeliculas_CellClick);
             // 
@@ -252,7 +252,6 @@
             this.btncancelar.TabIndex = 8;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 

@@ -34,16 +34,16 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.lblnombreusuario = new System.Windows.Forms.Label();
+            this.lblcontraseña = new System.Windows.Forms.Label();
+            this.lbltipousuario = new System.Windows.Forms.Label();
+            this.txtxContraseña = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,77 +107,80 @@
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvUsuario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 194);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(625, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuario.Location = new System.Drawing.Point(14, 194);
+            this.dgvUsuario.Name = "dgvUsuario";
+            this.dgvUsuario.Size = new System.Drawing.Size(625, 150);
+            this.dgvUsuario.TabIndex = 3;
             // 
-            // label1
+            // lblnombreusuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 14);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Nombre Usuario:";
+            this.lblnombreusuario.AutoSize = true;
+            this.lblnombreusuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreusuario.Location = new System.Drawing.Point(28, 31);
+            this.lblnombreusuario.Name = "lblnombreusuario";
+            this.lblnombreusuario.Size = new System.Drawing.Size(113, 14);
+            this.lblnombreusuario.TabIndex = 4;
+            this.lblnombreusuario.Text = "Nombre Usuario:";
             // 
-            // label2
+            // lblcontraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(350, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 14);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Contraseña:";
+            this.lblcontraseña.AutoSize = true;
+            this.lblcontraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontraseña.Location = new System.Drawing.Point(350, 31);
+            this.lblcontraseña.Name = "lblcontraseña";
+            this.lblcontraseña.Size = new System.Drawing.Size(86, 14);
+            this.lblcontraseña.TabIndex = 5;
+            this.lblcontraseña.Text = "Contraseña:";
             // 
-            // label3
+            // lbltipousuario
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 14);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Tipo Usuario:";
+            this.lbltipousuario.AutoSize = true;
+            this.lbltipousuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltipousuario.Location = new System.Drawing.Point(28, 66);
+            this.lbltipousuario.Name = "lbltipousuario";
+            this.lbltipousuario.Size = new System.Drawing.Size(90, 14);
+            this.lbltipousuario.TabIndex = 6;
+            this.lbltipousuario.Text = "Tipo Usuario:";
             // 
-            // textBox1
+            // txtxContraseña
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(442, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtxContraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtxContraseña.Location = new System.Drawing.Point(442, 28);
+            this.txtxContraseña.Name = "txtxContraseña";
+            this.txtxContraseña.Size = new System.Drawing.Size(157, 22);
+            this.txtxContraseña.TabIndex = 7;
             // 
-            // textBox2
+            // txtNombreUsuario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 28);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 22);
-            this.textBox2.TabIndex = 8;
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(147, 28);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(168, 22);
+            this.txtNombreUsuario.TabIndex = 8;
             // 
-            // comboBox1
+            // cbTipoUsuario
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 22);
-            this.comboBox1.TabIndex = 9;
+            this.cbTipoUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoUsuario.FormattingEnabled = true;
+            this.cbTipoUsuario.Items.AddRange(new object[] {
+            "Admin",
+            "Empleado"});
+            this.cbTipoUsuario.Location = new System.Drawing.Point(147, 63);
+            this.cbTipoUsuario.Name = "cbTipoUsuario";
+            this.cbTipoUsuario.Size = new System.Drawing.Size(168, 22);
+            this.cbTipoUsuario.TabIndex = 9;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.lblnombreusuario);
+            this.groupBox1.Controls.Add(this.cbTipoUsuario);
+            this.groupBox1.Controls.Add(this.lblcontraseña);
+            this.groupBox1.Controls.Add(this.txtxContraseña);
+            this.groupBox1.Controls.Add(this.txtNombreUsuario);
+            this.groupBox1.Controls.Add(this.lbltipousuario);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
@@ -192,12 +195,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 359);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUsuario);
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmUsuario";
             this.Text = "FrmUsuario";
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -212,13 +215,13 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dgvUsuario;
+        private System.Windows.Forms.Label lblnombreusuario;
+        private System.Windows.Forms.Label lblcontraseña;
+        private System.Windows.Forms.Label lbltipousuario;
+        private System.Windows.Forms.TextBox txtxContraseña;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.ComboBox cbTipoUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

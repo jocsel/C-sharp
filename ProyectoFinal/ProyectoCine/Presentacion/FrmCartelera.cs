@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class FrmVenta : Form
+    public partial class FrmCartelera : Form
     {
-        public FrmVenta()
+        public FrmCartelera()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

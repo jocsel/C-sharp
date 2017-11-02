@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class EVenta
+    class EVenta
     {
         public int IdVenta { get; set; }
         public int IdCartelera { get; set; }
-        public DateTime Fecha { get; set; }
         public DateTime Hora { get; set; }
         public int NumTicket { get; set; }
         public double CostoTotal { get; set; }

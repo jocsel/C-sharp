@@ -32,7 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbsubtitulo = new System.Windows.Forms.ComboBox();
+            this.txtsubtitulo = new System.Windows.Forms.ComboBox();
             this.txtduracion = new System.Windows.Forms.TextBox();
             this.txtaño = new System.Windows.Forms.TextBox();
             this.txtidioma = new System.Windows.Forms.TextBox();
@@ -79,14 +79,15 @@
             // dgvPeliculas
             // 
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeliculas.Location = new System.Drawing.Point(9, 246);
+            this.dgvPeliculas.Location = new System.Drawing.Point(124, 246);
             this.dgvPeliculas.Name = "dgvPeliculas";
-            this.dgvPeliculas.Size = new System.Drawing.Size(781, 182);
+            this.dgvPeliculas.Size = new System.Drawing.Size(552, 182);
             this.dgvPeliculas.TabIndex = 2;
+            this.dgvPeliculas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeliculas_CellClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbsubtitulo);
+            this.groupBox1.Controls.Add(this.txtsubtitulo);
             this.groupBox1.Controls.Add(this.txtduracion);
             this.groupBox1.Controls.Add(this.txtaño);
             this.groupBox1.Controls.Add(this.txtidioma);
@@ -106,16 +107,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Peliculas";
             // 
-            // cbsubtitulo
+            // txtsubtitulo
             // 
-            this.cbsubtitulo.FormattingEnabled = true;
-            this.cbsubtitulo.Items.AddRange(new object[] {
+            this.txtsubtitulo.FormattingEnabled = true;
+            this.txtsubtitulo.Items.AddRange(new object[] {
             "Si",
             "No"});
-            this.cbsubtitulo.Location = new System.Drawing.Point(330, 67);
-            this.cbsubtitulo.Name = "cbsubtitulo";
-            this.cbsubtitulo.Size = new System.Drawing.Size(171, 22);
-            this.cbsubtitulo.TabIndex = 14;
+            this.txtsubtitulo.Location = new System.Drawing.Point(330, 67);
+            this.txtsubtitulo.Name = "txtsubtitulo";
+            this.txtsubtitulo.Size = new System.Drawing.Size(171, 22);
+            this.txtsubtitulo.TabIndex = 14;
             // 
             // txtduracion
             // 
@@ -241,6 +242,7 @@
             this.btnguardar.TabIndex = 9;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btncancelar
             // 
@@ -250,6 +252,7 @@
             this.btncancelar.TabIndex = 8;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 
@@ -259,6 +262,7 @@
             this.btneliminar.TabIndex = 7;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
@@ -268,6 +272,7 @@
             this.btnmodificar.TabIndex = 6;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnnuevo
             // 
@@ -337,7 +342,7 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnnuevo;
-        private System.Windows.Forms.ComboBox cbsubtitulo;
+        private System.Windows.Forms.ComboBox txtsubtitulo;
         private System.Windows.Forms.GroupBox groupBox3;
     }
 }

@@ -17,9 +17,8 @@ namespace Presentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new PLogin());
-            //Application.Run(new FrmVenta());
+            Application.Run(new FrmPelicula());
             //Application.Run(new FrmSucursal());
-            Application.Run(new FrmCartelera());
             
         }
     }

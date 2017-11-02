@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidad;
 using Negocio;
-using Datos;
 
 namespace Presentacion
 {
@@ -21,14 +20,14 @@ namespace Presentacion
         {
             InitializeComponent();
             Deshabilitar();
+            btnmodificar.Enabled = false;
+            btneliminar.Enabled = false;
+            btncancelar.Enabled = false;
+            btnguardar.Enabled = false;
         }
-        
+
         private void FrmSucursal_Load(object sender, EventArgs e)
         {
-            DSucursal sucursal = new DSucursal();
-            dgvSucursal.DataSource = sucursal.obtenerSucursal();
-            dgvSucursal.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvSucursal.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             try
             {
                 actualizarSucursal();
@@ -101,7 +100,7 @@ namespace Presentacion
                     NSucursal gestionsuc = new NSucursal();
                     gestionsuc.Modificar(ModSucursal);
 
-                    MessageBox.Show("Se modifico correctamente", "Cursos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se modifico correctamente", "Sucursal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -113,7 +112,7 @@ namespace Presentacion
 
                 NSucursal gestion = new NSucursal();
                 gestion.Agregar(newSucursal);
-                MessageBox.Show("Se guardo correctamente", "Cursos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se guardo correctamente", "Sucursal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 actualizarSucursal();
@@ -161,6 +160,7 @@ namespace Presentacion
                 txtdireccion.Text = dgvSucursal.Rows[e.RowIndex].Cells["Direccion"].Value.ToString();
                 btnmodificar.Enabled = true;
                 btneliminar.Enabled = true;
+                Deshabilitar();
             }
         }
 
@@ -184,7 +184,7 @@ namespace Presentacion
 
             {
 
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
         }
 
@@ -198,9 +198,6 @@ namespace Presentacion
            
         }
 
-        private void txtnombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

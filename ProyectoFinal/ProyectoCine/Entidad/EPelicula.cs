@@ -13,7 +13,7 @@ namespace Entidad
         public string Genero { get; set; }
         public string Idioma { get; set; }
         public string Subtitulo { get; set; }
-        public int? Año { get; set; }
+        public int Año { get; set; }
         public TimeSpan Duracion {get; set; }
     }
 }

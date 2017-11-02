@@ -45,7 +45,7 @@ namespace Datos
                     else
                         datosPeli.Subtitulo = leer.GetString(4);
                     if (leer.IsDBNull(5))
-                        datosPeli.Año = null;
+                        datosPeli.Año =0;
                     else
                         datosPeli.Año = leer.GetInt32(5);
 
@@ -57,80 +57,6 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                throw ex;
-            }
-        }
-
-        public void Agregar(EPelicula nuevaPelicula)
-        {
-            try {
-
-                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
-                SqlCommand comando = new SqlCommand();
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.CommandText = "INSERTAR_PELI";
-                comando.Parameters.AddWithValue("@Nombre",nuevaPelicula.Nombre);
-                comando.Parameters.AddWithValue("@Genero",nuevaPelicula.Genero);
-                comando.Parameters.AddWithValue("@Idioma",nuevaPelicula.Idioma);
-                comando.Parameters.AddWithValue("@Subtitulo",nuevaPelicula.Subtitulo);
-                comando.Parameters.AddWithValue("@Año",nuevaPelicula.Año);
-                comando.Parameters.AddWithValue("@Duracion",nuevaPelicula.Duracion);
-                comando.Connection = conexion;
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-            }
-
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public void Modificar(EPelicula modificarPelicula)
-        {
-            try
-            {
-                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
-                SqlCommand comando = new SqlCommand();
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.CommandText = "ACTUALIZAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula",modificarPelicula.Id_Pelicula);
-                comando.Parameters.AddWithValue("@Nombre",modificarPelicula.Nombre);
-                comando.Parameters.AddWithValue("@Genero",modificarPelicula.Genero);
-                comando.Parameters.AddWithValue("@Idioma",modificarPelicula.Idioma);
-                comando.Parameters.AddWithValue("@Subtitulo",modificarPelicula.Subtitulo);
-                comando.Parameters.AddWithValue("@Año",modificarPelicula.Año);
-                comando.Parameters.AddWithValue("@Duracion",modificarPelicula.Duracion);
-                comando.Connection = conexion;
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            
-        }
-
-        public void Eliminar(EPelicula eliminarPelicula)
-        {
-            try {
-                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
-                SqlCommand comando = new SqlCommand();
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.CommandText = "ELIMINAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula",eliminarPelicula.Id_Pelicula);
-                comando.Connection = conexion;
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-            }
-
-            catch (Exception ex) {
-
                 throw ex;
             }
         }

@@ -240,5 +240,17 @@ namespace Presentacion
             btneliminar.Enabled = false;
             btnmodificar.Enabled = false;
         }
+
+       
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

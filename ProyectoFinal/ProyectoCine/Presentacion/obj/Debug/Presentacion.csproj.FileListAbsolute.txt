@@ -15,23 +15,6 @@ D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmPelicula.resources
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSucursal.resources
 D:\9no cuatrimestre\POO\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmInicio.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.dll
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.dll
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.dll
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmInicio.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmPelicula.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSucursal.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
@@ -71,11 +54,6 @@ E:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Pre
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
 D:\Git\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSala.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmCartelera.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuario.resources
-F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmVenta.resources
 C:\Users\STAR\Desktop\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
 C:\Users\STAR\Desktop\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\STAR\Desktop\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
@@ -120,3 +98,25 @@ D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion
 D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources
 D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 D:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmCartelera.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmInicio.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmPelicula.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSala.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSucursal.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuario.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmVenta.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.dll
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.dll
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.dll
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb

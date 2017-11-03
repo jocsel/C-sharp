@@ -122,18 +122,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -161,16 +161,52 @@
     <None Include="Resources\Apps-Google-Movies-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ubicacion-icono.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\X.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\User_Circle.png" />
+    <None Include="Resources\atomix_user31.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\atomix_user31.png" />
+    <None Include="Resources\cartelera.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartelera1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\peli1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sala1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sala2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sucursal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sucursal1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

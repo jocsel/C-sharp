@@ -207,5 +207,10 @@ namespace Presentacion
             btnguardar.Enabled = false;
             btnnuevo.Enabled = true;
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

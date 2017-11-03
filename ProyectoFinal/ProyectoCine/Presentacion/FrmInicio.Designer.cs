@@ -172,6 +172,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(582, 29);
             this.panel2.TabIndex = 1;
+            
             // 
             // pictureBox8
             // 
@@ -204,6 +205,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // FrmInicio
             // 

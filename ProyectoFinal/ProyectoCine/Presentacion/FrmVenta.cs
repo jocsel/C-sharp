@@ -26,5 +26,18 @@ namespace Presentacion
         {
 
         }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmInicio inicio = new FrmInicio();
+            inicio.Show();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

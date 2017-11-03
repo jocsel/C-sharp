@@ -35,13 +35,16 @@ namespace Presentacion
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             FrmSucursal sucursal = new FrmSucursal();
+            this.Hide();
             sucursal.Show();
+            
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             FrmSala sala = new FrmSala();
             sala.Show();
+            this.Hide();
 
         }
 
@@ -49,12 +52,16 @@ namespace Presentacion
         {
             FrmPelicula pelicula = new FrmPelicula();
             pelicula.Show();
+            this.Hide();
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            
+            
             FrmCartelera cartelera = new FrmCartelera();
+            this.Hide();
             cartelera.Show();
 
         }
@@ -62,13 +69,16 @@ namespace Presentacion
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             FrmVenta venta = new FrmVenta();
+
             venta.Show();
+            this.Hide();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             FrmUsuario usuario = new FrmUsuario();
             usuario.Show();
+            this.Hide();
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
@@ -131,5 +141,12 @@ namespace Presentacion
         {
             pictureBox4.Image = new Bitmap(Properties.Resources.usuario);
         }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

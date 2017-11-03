@@ -200,6 +200,8 @@ namespace Presentacion
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
+            FrmInicio inicio = new FrmInicio();
+            inicio.Show();
             this.Close();
         }
 

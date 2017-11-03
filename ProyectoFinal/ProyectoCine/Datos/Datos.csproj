@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dcartelera.cs" />
     <Compile Include="DPelicula.cs" />
     <Compile Include="DSala.cs" />
     <Compile Include="DSucursal.cs" />

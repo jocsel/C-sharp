@@ -42,9 +42,13 @@
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbFiltrar = new System.Windows.Forms.GroupBox();
+            this.txtFiltrarUsuario = new System.Windows.Forms.TextBox();
+            this.lblFiltrarNombre = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.gbFiltrar.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -55,7 +59,7 @@
             this.groupBox2.Controls.Add(this.btnmodificar);
             this.groupBox2.Controls.Add(this.btnnuevo);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(14, 123);
+            this.groupBox2.Location = new System.Drawing.Point(42, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 65);
             this.groupBox2.TabIndex = 2;
@@ -70,6 +74,7 @@
             this.btnguardar.TabIndex = 14;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btncancelar
             // 
@@ -79,6 +84,7 @@
             this.btncancelar.TabIndex = 13;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 
@@ -88,6 +94,7 @@
             this.btneliminar.TabIndex = 12;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
@@ -97,6 +104,7 @@
             this.btnmodificar.TabIndex = 11;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnnuevo
             // 
@@ -106,14 +114,17 @@
             this.btnnuevo.TabIndex = 10;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // dgvUsuario
             // 
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuario.Location = new System.Drawing.Point(14, 194);
+            this.dgvUsuario.Location = new System.Drawing.Point(42, 282);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.Size = new System.Drawing.Size(625, 150);
             this.dgvUsuario.TabIndex = 3;
+            this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
+            this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
             // 
             // lblnombreusuario
             // 
@@ -150,6 +161,7 @@
             this.txtxContraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtxContraseña.Location = new System.Drawing.Point(442, 28);
             this.txtxContraseña.Name = "txtxContraseña";
+            this.txtxContraseña.PasswordChar = '*';
             this.txtxContraseña.Size = new System.Drawing.Size(157, 22);
             this.txtxContraseña.TabIndex = 7;
             // 
@@ -182,27 +194,61 @@
             this.groupBox1.Controls.Add(this.txtNombreUsuario);
             this.groupBox1.Controls.Add(this.lbltipousuario);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(42, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(624, 95);
+            this.groupBox1.Size = new System.Drawing.Size(625, 95);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Usuario";
+            // 
+            // gbFiltrar
+            // 
+            this.gbFiltrar.Controls.Add(this.lblFiltrarNombre);
+            this.gbFiltrar.Controls.Add(this.txtFiltrarUsuario);
+            this.gbFiltrar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFiltrar.Location = new System.Drawing.Point(42, 216);
+            this.gbFiltrar.Name = "gbFiltrar";
+            this.gbFiltrar.Size = new System.Drawing.Size(625, 48);
+            this.gbFiltrar.TabIndex = 11;
+            this.gbFiltrar.TabStop = false;
+            this.gbFiltrar.Text = "Filtrar";
+            // 
+            // txtFiltrarUsuario
+            // 
+            this.txtFiltrarUsuario.Location = new System.Drawing.Point(114, 19);
+            this.txtFiltrarUsuario.Name = "txtFiltrarUsuario";
+            this.txtFiltrarUsuario.Size = new System.Drawing.Size(480, 22);
+            this.txtFiltrarUsuario.TabIndex = 0;
+            this.txtFiltrarUsuario.TextChanged += new System.EventHandler(this.txtFiltrarUsuario_TextChanged);
+            // 
+            // lblFiltrarNombre
+            // 
+            this.lblFiltrarNombre.AutoSize = true;
+            this.lblFiltrarNombre.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltrarNombre.Location = new System.Drawing.Point(43, 22);
+            this.lblFiltrarNombre.Name = "lblFiltrarNombre";
+            this.lblFiltrarNombre.Size = new System.Drawing.Size(65, 14);
+            this.lblFiltrarNombre.TabIndex = 1;
+            this.lblFiltrarNombre.Text = "Nombre :";
             // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 359);
+            this.ClientSize = new System.Drawing.Size(700, 454);
+            this.Controls.Add(this.gbFiltrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUsuario);
             this.Controls.Add(this.groupBox2);
             this.Name = "FrmUsuario";
-            this.Text = "FrmUsuario";
+            this.Text = "Usuario";
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbFiltrar.ResumeLayout(false);
+            this.gbFiltrar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +269,8 @@
         private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.ComboBox cbTipoUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbFiltrar;
+        private System.Windows.Forms.TextBox txtFiltrarUsuario;
+        private System.Windows.Forms.Label lblFiltrarNombre;
     }
 }

@@ -8,9 +8,9 @@ namespace Entidad
 {
     public class EUsuario
     {
-        public int Id_Usuario { get; set; }
-        public string NombreUsuario { get; set; }
+        public int Id { get; set; }
+        public string Nombre_Usuario { get; set; }
         public string Contraseña { get; set; }
-        public string TipoUsuario { get; set; }
+        public string Tipo_De_Usuario { get; set; }
     }
 }

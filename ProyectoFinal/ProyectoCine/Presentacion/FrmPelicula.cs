@@ -23,6 +23,9 @@ namespace Presentacion
 
         private void FrmPelicula_Load(object sender, EventArgs e)
         {
+            dgvPeliculas.AutoResizeColumns();
+            dgvPeliculas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvPeliculas.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             try
             {
                 actualizarListaPelicula();
@@ -227,6 +230,15 @@ namespace Presentacion
                 btnmodificar.Enabled = true;
                 btneliminar.Enabled = true;
             }
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+            btnnuevo.Enabled = true;
+            btnguardar.Enabled = false;
+            btneliminar.Enabled = false;
+            btnmodificar.Enabled = false;
         }
     }
 }

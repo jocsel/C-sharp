@@ -295,24 +295,27 @@ END
 
 --PROC DE ELIMAR USUARIO
 
+drop proc ELIMINAR_USUARIO
+
 CREATE PROC ELIMINAR_USUARIO 
 (
-@Nombre_Usuario nvarchar(50)
+@Id nvarchar
 )
 AS BEGIN
-DELETE FROM Usuarios WHERE Nombre_Usuario=@Nombre_Usuario
+DELETE FROM Usuarios WHERE Id=@Id
 END
 
 --PROC DE ACTUALIZAR
-
+drop proc ACTUALIZAR_USUARIO
 CREATE PROC ACTUALIZAR_USUARIO
 (
+@Id int,
 @Nombre_Usuario nvarchar(50),
 @Contraseña nvarchar(max),
 @Tipo_De_Usuario nvarchar(15)
 )
 AS BEGIN 
-UPDATE Usuarios SET Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario WHERE  Nombre_Usuario=@Nombre_Usuario
+UPDATE Usuarios SET Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario, Nombre_Usuario=@Nombre_Usuario WHERE Id=@Id
 END
 
 --PROC DE BUSCAR
@@ -326,3 +329,5 @@ select * from Pelicula
 delete from Pelicula where Id_Pelicula='1' 
 
 update Sucursal set Telefono =84121587 where Id_Sucursal =1
+
+select * from Venta

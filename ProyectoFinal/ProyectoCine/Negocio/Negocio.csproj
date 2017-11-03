@@ -43,6 +43,7 @@
     <Compile Include="NPelicula.cs" />
     <Compile Include="NSala.cs" />
     <Compile Include="NSucursal.cs" />
+    <Compile Include="NUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

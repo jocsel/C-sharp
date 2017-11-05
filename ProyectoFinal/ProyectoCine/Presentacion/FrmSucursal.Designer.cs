@@ -30,11 +30,10 @@
         {
             this.dgvSucursal = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.lbldireccion = new System.Windows.Forms.Label();
-            this.txttelefono = new System.Windows.Forms.TextBox();
             this.lbltelefono = new System.Windows.Forms.Label();
-            this.txtciudad = new System.Windows.Forms.TextBox();
             this.lblcuida = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.lblnombre = new System.Windows.Forms.Label();
@@ -45,8 +44,9 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtciudad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,11 +65,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtciudad);
+            this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.txtdireccion);
             this.groupBox1.Controls.Add(this.lbldireccion);
-            this.groupBox1.Controls.Add(this.txttelefono);
             this.groupBox1.Controls.Add(this.lbltelefono);
-            this.groupBox1.Controls.Add(this.txtciudad);
             this.groupBox1.Controls.Add(this.lblcuida);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.lblnombre);
@@ -80,6 +80,14 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Sucursal";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(79, 60);
+            this.txttelefono.Mask = "00000000";
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(207, 22);
+            this.txttelefono.TabIndex = 8;
             // 
             // txtdireccion
             // 
@@ -99,14 +107,6 @@
             this.lbldireccion.TabIndex = 6;
             this.lbldireccion.Text = "Direccion:";
             // 
-            // txttelefono
-            // 
-            this.txttelefono.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttelefono.Location = new System.Drawing.Point(79, 60);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(207, 22);
-            this.txttelefono.TabIndex = 5;
-            // 
             // lbltelefono
             // 
             this.lbltelefono.AutoSize = true;
@@ -116,14 +116,6 @@
             this.lbltelefono.Size = new System.Drawing.Size(66, 14);
             this.lbltelefono.TabIndex = 4;
             this.lbltelefono.Text = "Telefono:";
-            // 
-            // txtciudad
-            // 
-            this.txtciudad.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtciudad.Location = new System.Drawing.Point(371, 23);
-            this.txtciudad.Name = "txtciudad";
-            this.txtciudad.Size = new System.Drawing.Size(224, 22);
-            this.txtciudad.TabIndex = 3;
             // 
             // lblcuida
             // 
@@ -229,6 +221,17 @@
             this.panel2.Size = new System.Drawing.Size(647, 29);
             this.panel2.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(274, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 18);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "SUCURSAL";
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -241,16 +244,22 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // label1
+            // txtciudad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(274, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "SUCURSAL";
+            this.txtciudad.FormattingEnabled = true;
+            this.txtciudad.Items.AddRange(new object[] {
+            "Managua",
+            "Masaya",
+            "Leon",
+            "Chinandega",
+            "Chontales",
+            "Boaco",
+            "Rivas",
+            "Granada"});
+            this.txtciudad.Location = new System.Drawing.Point(371, 23);
+            this.txtciudad.Name = "txtciudad";
+            this.txtciudad.Size = new System.Drawing.Size(224, 22);
+            this.txtciudad.TabIndex = 9;
             // 
             // FrmSucursal
             // 
@@ -285,10 +294,8 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lbltelefono;
-        private System.Windows.Forms.TextBox txtciudad;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.Label lbldireccion;
-        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnguardar;
         private System.Windows.Forms.Button btncancelar;
@@ -298,5 +305,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox txttelefono;
+        private System.Windows.Forms.ComboBox txtciudad;
     }
 }

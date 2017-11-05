@@ -20,6 +20,11 @@ namespace Presentacion
         public FrmUsuario()
         {
             InitializeComponent();
+            Deshabilitar();
+            btnmodificar.Enabled = false;
+            btneliminar.Enabled = false;
+            btncancelar.Enabled = false;
+            btnguardar.Enabled = false;
         }
 
         private void FrmUsuario_Load(object sender, EventArgs e)
@@ -27,7 +32,7 @@ namespace Presentacion
             dgvUsuario.AutoResizeColumns();
             dgvUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvUsuario.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
+            
             try {
                 actualizarListaUsuarios();
                 dgvUsuario.DataSource = listaUsuarios;
@@ -80,7 +85,7 @@ namespace Presentacion
             txtNombreUsuario.Enabled = false;
             txtxContraseña.Enabled = false;
             cbTipoUsuario.Enabled = false;
-
+           
         }
         private void Limpiar()
         {
@@ -195,6 +200,10 @@ namespace Presentacion
 
                 btneliminar.Enabled = true;
                 btnmodificar.Enabled = true;
+                btncancelar.Enabled = false;
+                btnguardar.Enabled = false;
+                Deshabilitar();
+
 
             }
         }

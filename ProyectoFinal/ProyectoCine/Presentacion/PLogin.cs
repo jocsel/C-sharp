@@ -22,5 +22,16 @@ namespace Presentacion
             /// Environment.Exit(0);
             this.Close();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            //Environment.Exit(0);
+            this.Close();
+        }
     }
 }

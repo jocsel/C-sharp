@@ -172,6 +172,7 @@
             // 
             // txtNombreUsuario
             // 
+            this.txtNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombreUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreUsuario.Location = new System.Drawing.Point(147, 28);
             this.txtNombreUsuario.Name = "txtNombreUsuario";

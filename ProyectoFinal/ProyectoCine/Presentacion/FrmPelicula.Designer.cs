@@ -33,10 +33,6 @@
             this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtsubtitulo = new System.Windows.Forms.ComboBox();
-            this.txtduracion = new System.Windows.Forms.TextBox();
-            this.txtaño = new System.Windows.Forms.TextBox();
-            this.txtidioma = new System.Windows.Forms.TextBox();
-            this.txtgenero = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.lblsubtitulo = new System.Windows.Forms.Label();
             this.lblaño = new System.Windows.Forms.Label();
@@ -54,6 +50,10 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtgenero = new System.Windows.Forms.ComboBox();
+            this.txtidioma = new System.Windows.Forms.ComboBox();
+            this.txtaño = new System.Windows.Forms.TextBox();
+            this.txtduracion = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -94,11 +94,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtsubtitulo);
             this.groupBox1.Controls.Add(this.txtduracion);
             this.groupBox1.Controls.Add(this.txtaño);
             this.groupBox1.Controls.Add(this.txtidioma);
             this.groupBox1.Controls.Add(this.txtgenero);
+            this.groupBox1.Controls.Add(this.txtsubtitulo);
             this.groupBox1.Controls.Add(this.txtnombre);
             this.groupBox1.Controls.Add(this.lblsubtitulo);
             this.groupBox1.Controls.Add(this.lblaño);
@@ -124,38 +124,6 @@
             this.txtsubtitulo.Name = "txtsubtitulo";
             this.txtsubtitulo.Size = new System.Drawing.Size(171, 22);
             this.txtsubtitulo.TabIndex = 14;
-            // 
-            // txtduracion
-            // 
-            this.txtduracion.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtduracion.Location = new System.Drawing.Point(588, 67);
-            this.txtduracion.Name = "txtduracion";
-            this.txtduracion.Size = new System.Drawing.Size(174, 22);
-            this.txtduracion.TabIndex = 13;
-            // 
-            // txtaño
-            // 
-            this.txtaño.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaño.Location = new System.Drawing.Point(73, 67);
-            this.txtaño.Name = "txtaño";
-            this.txtaño.Size = new System.Drawing.Size(174, 22);
-            this.txtaño.TabIndex = 11;
-            // 
-            // txtidioma
-            // 
-            this.txtidioma.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtidioma.Location = new System.Drawing.Point(588, 32);
-            this.txtidioma.Name = "txtidioma";
-            this.txtidioma.Size = new System.Drawing.Size(174, 22);
-            this.txtidioma.TabIndex = 10;
-            // 
-            // txtgenero
-            // 
-            this.txtgenero.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtgenero.Location = new System.Drawing.Point(327, 32);
-            this.txtgenero.Name = "txtgenero";
-            this.txtgenero.Size = new System.Drawing.Size(174, 22);
-            this.txtgenero.TabIndex = 9;
             // 
             // txtnombre
             // 
@@ -338,6 +306,42 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "PELICULA";
             // 
+            // txtgenero
+            // 
+            this.txtgenero.FormattingEnabled = true;
+            this.txtgenero.Items.AddRange(new object[] {
+            "Accion",
+            "Comedia",
+            "Terror"});
+            this.txtgenero.Location = new System.Drawing.Point(330, 32);
+            this.txtgenero.Name = "txtgenero";
+            this.txtgenero.Size = new System.Drawing.Size(171, 22);
+            this.txtgenero.TabIndex = 15;
+            // 
+            // txtidioma
+            // 
+            this.txtidioma.FormattingEnabled = true;
+            this.txtidioma.Location = new System.Drawing.Point(585, 32);
+            this.txtidioma.Name = "txtidioma";
+            this.txtidioma.Size = new System.Drawing.Size(177, 22);
+            this.txtidioma.TabIndex = 16;
+            // 
+            // txtaño
+            // 
+            this.txtaño.Location = new System.Drawing.Point(73, 67);
+            this.txtaño.Name = "txtaño";
+            this.txtaño.Size = new System.Drawing.Size(174, 22);
+            this.txtaño.TabIndex = 17;
+            // 
+            // txtduracion
+            // 
+            this.txtduracion.Location = new System.Drawing.Point(588, 67);
+            this.txtduracion.Mask = "00:00";
+            this.txtduracion.Name = "txtduracion";
+            this.txtduracion.Size = new System.Drawing.Size(174, 22);
+            this.txtduracion.TabIndex = 18;
+            this.txtduracion.ValidatingType = typeof(System.DateTime);
+            // 
             // FrmPelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,10 +381,6 @@
         private System.Windows.Forms.Label lblidioma;
         private System.Windows.Forms.Label lblduracion;
         private System.Windows.Forms.Label lblaño;
-        private System.Windows.Forms.TextBox txtduracion;
-        private System.Windows.Forms.TextBox txtaño;
-        private System.Windows.Forms.TextBox txtidioma;
-        private System.Windows.Forms.TextBox txtgenero;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label lblsubtitulo;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -394,6 +394,10 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtaño;
+        private System.Windows.Forms.ComboBox txtidioma;
+        private System.Windows.Forms.ComboBox txtgenero;
+        private System.Windows.Forms.MaskedTextBox txtduracion;
     }
 }
 

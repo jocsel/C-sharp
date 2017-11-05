@@ -69,11 +69,12 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 515);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Presentacion.Properties.Resources.logo1;
-            this.pictureBox7.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox7.Location = new System.Drawing.Point(0, 0);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 100);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -91,8 +92,8 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter_1);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave_1);
             // 
             // pictureBox2
             // 
@@ -105,8 +106,8 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter_1);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave_1);
             // 
             // pictureBox6
             // 
@@ -119,8 +120,8 @@
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox6_MouseEnter);
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox6_MouseEnter_1);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave_1);
             // 
             // pictureBox3
             // 
@@ -133,13 +134,13 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter_1);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave_1);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::Presentacion.Properties.Resources.peli;
+            this.pictureBox5.Image = global::Presentacion.Properties.Resources.pelii1;
             this.pictureBox5.Location = new System.Drawing.Point(0, 247);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(200, 60);
@@ -147,8 +148,8 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter_1);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave_1);
             // 
             // pictureBox4
             // 
@@ -161,8 +162,8 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter_1);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave_1);
             // 
             // panel2
             // 
@@ -172,7 +173,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(582, 29);
             this.panel2.TabIndex = 1;
-            
             // 
             // pictureBox8
             // 

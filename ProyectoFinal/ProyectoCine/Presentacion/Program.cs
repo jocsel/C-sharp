@@ -20,7 +20,7 @@ namespace Presentacion
             //Application.Run(new FrmVenta());
             //Application.Run(new FrmSucursal());
             //Application.Run(new FrmPelicula());
-            Application.Run(new FrmInicio());
+           // Application.Run(new FrmInicio());
         }
     }
 }

@@ -39,5 +39,10 @@ namespace Presentacion
         {
 
         }
+
+        private void FrmVenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

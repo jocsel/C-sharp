@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Datos;
 using Entidad;
+using System.Data;
 
 namespace Negocio
 {
@@ -76,6 +77,26 @@ namespace Negocio
                 throw ex;
 
             }
+        }
+
+        public DataTable logeo (EUsuario logeando)
+        {
+            try
+            {
+                if(logeando.Nombre_Usuario.Length==0)
+                    throw new ArgumentException("Ingresa el nombre de usuario");
+               if (logeando.Contraseña.Length == 0)
+                   throw new ArgumentException("Ingresa la contrase;a de usuario");
+
+                DUsuarios gestionUsuario = new DUsuarios();
+                return gestionUsuario.log(logeando);
+
+            }
+            catch(Exception ex)
+               {
+                throw ex;
+            }
+
         }
     }
 }

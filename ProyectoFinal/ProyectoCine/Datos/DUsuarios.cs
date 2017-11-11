@@ -42,6 +42,7 @@ namespace Datos
                         datosUsuario.Tipo_De_Usuario = null;
                     else
                         datosUsuario.Tipo_De_Usuario = leer.GetString(3);
+
                     listaUsuarios.Add(datosUsuario);
 
 
@@ -121,5 +122,33 @@ namespace Datos
             }
 
         }
+
+        public DataTable log (EUsuario logeando)
+        {
+            try
+            {
+                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
+                SqlCommand comando = new SqlCommand();
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.CommandText = "logeo";
+                comando.Parameters.AddWithValue("@usuario", logeando.Nombre_Usuario);
+                comando.Parameters.AddWithValue("@contraseña", logeando.Contraseña);
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(comando);
+                DataTable dtable = new DataTable();
+                da.Fill(dtable);
+                conexion.Close();
+                return dtable;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+
     }
 }

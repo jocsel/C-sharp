@@ -75,6 +75,7 @@ namespace Presentacion
         }
         private void Habilitar()
         {
+            txtnombreapellido.Enabled = true;
             txtNombreUsuario.Enabled = true;
             txtxContraseña.Enabled = true;
             cbTipoUsuario.Enabled = true;
@@ -83,6 +84,7 @@ namespace Presentacion
         private void Deshabilitar()
         {
             txtNombreUsuario.Enabled = false;
+            txtnombreapellido.Enabled = false;
             txtxContraseña.Enabled = false;
             cbTipoUsuario.Enabled = false;
            
@@ -90,6 +92,7 @@ namespace Presentacion
         private void Limpiar()
         {
             txtNombreUsuario.Text = "";
+            txtnombreapellido.Text = "";
             txtxContraseña.Text = "";
             cbTipoUsuario.Text = "";
 
@@ -136,6 +139,7 @@ namespace Presentacion
                 {
                     EUsuario modUsuario = new EUsuario();
                     modUsuario.Id = Convert.ToInt32(txtNombreUsuario.Tag.ToString());
+                    modUsuario.Nombre = txtnombreapellido.Text;
                     modUsuario.Nombre_Usuario = txtNombreUsuario.Text;
                     modUsuario.Contraseña = txtxContraseña.Text;
                     modUsuario.Tipo_De_Usuario = cbTipoUsuario.Text;
@@ -147,6 +151,7 @@ namespace Presentacion
                 else {
 
                     EUsuario nuevoUsuario = new EUsuario();
+                    nuevoUsuario.Nombre = txtnombreapellido.Text;
                     nuevoUsuario.Nombre_Usuario = txtNombreUsuario.Text;
                     nuevoUsuario.Contraseña = txtxContraseña.Text;
                     nuevoUsuario.Tipo_De_Usuario = cbTipoUsuario.Text;
@@ -183,6 +188,11 @@ namespace Presentacion
             if (e.RowIndex>=0)
             {
                 txtNombreUsuario.Tag = Convert.ToInt32(dgvUsuario.Rows[e.RowIndex].Cells["Id"].Value.ToString());
+
+                if (dgvUsuario.Rows[e.RowIndex].Cells["Nombre"].Value == null)
+                    txtnombreapellido.Text = "";
+                else
+                    txtnombreapellido.Text = dgvUsuario.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
 
                 if (dgvUsuario.Rows[e.RowIndex].Cells["Nombre_Usuario"].Value == null)
                     txtNombreUsuario.Text = "";

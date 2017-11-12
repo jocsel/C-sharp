@@ -12,6 +12,7 @@ namespace Presentacion
 {
     public partial class FrmVenta : Form
     {
+        
         public FrmVenta()
         {
             InitializeComponent();
@@ -42,7 +43,10 @@ namespace Presentacion
 
         private void FrmVenta_Load(object sender, EventArgs e)
         {
+           
+            
 
+           
         }
     }
 }

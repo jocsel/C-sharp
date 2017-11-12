@@ -33,8 +33,6 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
-            this.cbSala = new System.Windows.Forms.ComboBox();
-            this.cbpelicula = new System.Windows.Forms.ComboBox();
             this.lblSala = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.LblHora = new System.Windows.Forms.Label();
@@ -49,6 +47,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtpelicula = new System.Windows.Forms.TextBox();
+            this.btnbuscarpeli = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCartelera)).BeginInit();
@@ -58,12 +60,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnbuscarpeli);
+            this.groupBox1.Controls.Add(this.txtpelicula);
             this.groupBox1.Controls.Add(this.txtValor);
             this.groupBox1.Controls.Add(this.lblValor);
             this.groupBox1.Controls.Add(this.dtpHora);
             this.groupBox1.Controls.Add(this.dtpFecha);
-            this.groupBox1.Controls.Add(this.cbSala);
-            this.groupBox1.Controls.Add(this.cbpelicula);
             this.groupBox1.Controls.Add(this.lblSala);
             this.groupBox1.Controls.Add(this.lblFecha);
             this.groupBox1.Controls.Add(this.LblHora);
@@ -112,24 +116,6 @@
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(211, 21);
             this.dtpFecha.TabIndex = 7;
-            // 
-            // cbSala
-            // 
-            this.cbSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSala.FormattingEnabled = true;
-            this.cbSala.Location = new System.Drawing.Point(84, 61);
-            this.cbSala.Name = "cbSala";
-            this.cbSala.Size = new System.Drawing.Size(211, 23);
-            this.cbSala.TabIndex = 6;
-            // 
-            // cbpelicula
-            // 
-            this.cbpelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbpelicula.FormattingEnabled = true;
-            this.cbpelicula.Location = new System.Drawing.Point(84, 29);
-            this.cbpelicula.Name = "cbpelicula";
-            this.cbpelicula.Size = new System.Drawing.Size(515, 23);
-            this.cbpelicula.TabIndex = 5;
             // 
             // lblSala
             // 
@@ -274,6 +260,40 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
+            // txtpelicula
+            // 
+            this.txtpelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpelicula.Location = new System.Drawing.Point(84, 29);
+            this.txtpelicula.Name = "txtpelicula";
+            this.txtpelicula.Size = new System.Drawing.Size(442, 21);
+            this.txtpelicula.TabIndex = 11;
+            // 
+            // btnbuscarpeli
+            // 
+            this.btnbuscarpeli.Location = new System.Drawing.Point(533, 28);
+            this.btnbuscarpeli.Name = "btnbuscarpeli";
+            this.btnbuscarpeli.Size = new System.Drawing.Size(67, 23);
+            this.btnbuscarpeli.TabIndex = 12;
+            this.btnbuscarpeli.Text = "Pelicula";
+            this.btnbuscarpeli.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(84, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(159, 21);
+            this.textBox1.TabIndex = 13;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(249, 62);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Sala";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FrmCartelera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,8 +322,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbSala;
-        private System.Windows.Forms.ComboBox cbpelicula;
         private System.Windows.Forms.Label lblSala;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label LblHora;
@@ -322,5 +340,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnbuscarpeli;
+        private System.Windows.Forms.TextBox txtpelicula;
     }
 }

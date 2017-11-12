@@ -40,6 +40,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.lbltipo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -188,6 +189,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.lbltipo);
             this.panel3.Controls.Add(this.pictureBox9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 29);
@@ -206,6 +208,14 @@
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
+            // 
+            // lbltipo
+            // 
+            this.lbltipo.AutoSize = true;
+            this.lbltipo.Location = new System.Drawing.Point(272, 43);
+            this.lbltipo.Name = "lbltipo";
+            this.lbltipo.Size = new System.Drawing.Size(0, 13);
+            this.lbltipo.TabIndex = 1;
             // 
             // FrmInicio
             // 
@@ -232,6 +242,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
@@ -251,6 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox9;
+        public System.Windows.Forms.Label lbltipo;
 
     }
 }

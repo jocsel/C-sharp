@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidad;
 
 namespace Presentacion
 {
     public partial class FrmInicio : Form
     {
+        public string  tipousuario;
         public FrmInicio()
         {
             InitializeComponent();
+            
+            
            
 
         }
@@ -27,6 +31,18 @@ namespace Presentacion
         private void FrmInicio_Load(object sender, EventArgs e)
         {
            
+            if(tipousuario=="Empleado")
+            {
+               
+                pictureBox1.Enabled = false;
+                pictureBox6.Enabled = false;
+                pictureBox2.Enabled = false;
+                pictureBox5.Enabled = false;
+                pictureBox4.Enabled = false;
+            }
+           
+            
+         
 
         }
 

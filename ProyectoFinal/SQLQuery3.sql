@@ -70,10 +70,21 @@ Contraseña nvarchar(max) not null,
 Tipo_De_Usuario nvarchar(15) not null
 )
 
+
+
+
+
+
+
+
 --PROCEDIMIENTOS ALMACENADOS
+
+
+
+
 CREATE PROC INSERTAR_SUC
 (
-@Id_Sucursal int,
+
 @Nombre nvarchar(20),
 @Ciudad nvarchar(20),
 @Telefono int,
@@ -81,8 +92,8 @@ CREATE PROC INSERTAR_SUC
 )
 AS
 BEGIN
-INSERT INTO Sucursal(Id_Sucursal,Nombre,Ciudad,Telefono,Direccion)
-VALUES (@Id_Sucursal,@Nombre,@Ciudad,@Telefono,@Direccion)
+INSERT INTO Sucursal(Nombre,Ciudad,Telefono,Direccion)
+VALUES (@Nombre,@Ciudad,@Telefono,@Direccion)
 END
 
 --PROC DE ELIMINAR SUCURSAL
@@ -117,25 +128,23 @@ AS
 BEGIN
 SELECT * FROM Sucursal
 END
+
+
+
+
+
 -----PROC DE INSERTAR SALA
 
 CREATE PROCEDURE INSERTAR_SALA
 (
-@Id_Sala int,
 @Id_Sucursal int,
 @Capacidad int
 )
 AS 
 BEGIN
-INSERT INTO Sala(Id_Sala,Id_Sucursal,Capacidad)
-VALUES(@Id_Sala,@Id_Sucursal,@Capacidad)
+INSERT INTO Sala(Id_Sucursal,Capacidad)
+VALUES(@Id_Sucursal,@Capacidad)
 END 
-
---PROC DE BUSCAR
-CREATE PROC BUSCAR_SUC
-AS BEGIN 
-SELECT * FROM Sucursal
-END
 
 --PROC DE ELIMINAR SALA
 CREATE PROCEDURE ELIMINAR_SALA
@@ -165,11 +174,14 @@ AS BEGIN
 SELECT * FROM Sala
 END
 
+
+
+
 --PROC DE INSERTAR PELICULA
 
 CREATE PROCEDURE INSERTAR_PELI
 (
-@Id_Pelicula int,
+
 @Nombre nvarchar(20),
 @Genero nvarchar(15),
 @Idioma nvarchar(15),
@@ -179,8 +191,8 @@ CREATE PROCEDURE INSERTAR_PELI
 )
 AS
 BEGIN
-INSERT INTO Pelicula (Id_Pelicula,Nombre,Genero,Idioma,Subtitulo,Año,Duracion)
-VALUES (@Id_Pelicula,@Nombre,@Genero,@Idioma,@Subtitulo,@Año,@Duracion)
+INSERT INTO Pelicula (Nombre,Genero,Idioma,Subtitulo,Año,Duracion)
+VALUES (@Nombre,@Genero,@Idioma,@Subtitulo,@Año,@Duracion)
 END
 
 --PROC DE ELIMINAR PELI 
@@ -192,7 +204,6 @@ CREATE PROCEDURE ELIMINAR_PELI
 AS BEGIN 
 DELETE FROM Pelicula WHERE Id_Pelicula=@Id_Pelicula
 END
-
 
 --PROC DE ACTUALIZAR PELICULA
 CREATE PROCEDURE ACTUALIZAR_PELI
@@ -215,10 +226,12 @@ AS BEGIN
 SELECT * FROM Pelicula
 END
 
+
+
+
 --PROC DE INSERTAR CARTELERA 
 CREATE PROCEDURE INSERTAR_CARTELERA
 (
-@Id_Cartelera int,
 @Id_Pelicula int,
 @Id_Sala int,
 @Fecha Date,
@@ -226,8 +239,8 @@ CREATE PROCEDURE INSERTAR_CARTELERA
 @Valor money 
 )
 AS BEGIN
-INSERT INTO Cartelera (Id_Cartelera,Id_Pelicula,Id_Sala,Fecha,Hora,Valor)
-values (@Id_Cartelera,@Id_Pelicula,@Id_Sala,@Fecha,@Hora,@Valor)
+INSERT INTO Cartelera (Id_Pelicula,Id_Sala,Fecha,Hora,Valor)
+values (@Id_Pelicula,@Id_Sala,@Fecha,@Hora,@Valor)
 end
 
 --PROC DE ELIMINAR  CARTELERA 
@@ -260,10 +273,13 @@ AS BEGIN
 SELECT * FROM Cartelera
 END
 
+
+
+
 --PROC DE INSERTAR  VENTAS 
 CREATE PROCEDURE INSERTAR_VENTAS
 (
-@Id_Venta int,
+
 @Id_Cartelera int,
 @Fecha date,
 @Hora time ,
@@ -271,8 +287,8 @@ CREATE PROCEDURE INSERTAR_VENTAS
 @Costo_total money
 )
 AS BEGIN 
-INSERT INTO Venta (Id_Venta,Id_Cartelera,Fecha,Hora,Num_ticket,Costo_total)
-VALUES (@Id_Venta,@Id_Cartelera,@Fecha,@Hora,@Num_ticket,@Costo_total)
+INSERT INTO Venta (Id_Cartelera,Fecha,Hora,Num_ticket,Costo_total)
+VALUES (@Id_Cartelera,@Fecha,@Hora,@Num_ticket,@Costo_total)
 END 
 
 --PROC DE BUSCAR
@@ -280,6 +296,9 @@ CREATE PROC BUSCAR_VENTAS
 AS BEGIN 
 SELECT * FROM Venta
 END
+
+
+
 
 --PROC DE INSERTAR USAURIO
 CREATE PROC INSERTAR_USUARIO

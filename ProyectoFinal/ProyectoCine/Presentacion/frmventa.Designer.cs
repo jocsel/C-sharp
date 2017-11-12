@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -37,7 +39,6 @@
             this.lblContoTotal = new System.Windows.Forms.Label();
             this.lblCantidadBoleto = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.cbPelicula = new System.Windows.Forms.ComboBox();
             this.lblPelicula = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,6 +59,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.numericUpDown1);
@@ -66,7 +69,6 @@
             this.groupBox1.Controls.Add(this.lblContoTotal);
             this.groupBox1.Controls.Add(this.lblCantidadBoleto);
             this.groupBox1.Controls.Add(this.lblFecha);
-            this.groupBox1.Controls.Add(this.cbPelicula);
             this.groupBox1.Controls.Add(this.lblPelicula);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 47);
@@ -76,9 +78,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Venta";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(470, 23);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Cartelera";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(112, 23);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(352, 22);
+            this.textBox1.TabIndex = 13;
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker2.Location = new System.Drawing.Point(393, 101);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -88,6 +109,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(393, 64);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -97,9 +119,10 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(161, 64);
+            this.numericUpDown1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(112, 64);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(130, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(179, 22);
             this.numericUpDown1.TabIndex = 8;
             // 
             // lblHora
@@ -127,7 +150,7 @@
             this.lblContoTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContoTotal.Location = new System.Drawing.Point(22, 104);
             this.lblContoTotal.Name = "lblContoTotal";
-            this.lblContoTotal.Size = new System.Drawing.Size(83, 14);
+            this.lblContoTotal.Size = new System.Drawing.Size(84, 14);
             this.lblContoTotal.TabIndex = 4;
             this.lblContoTotal.Text = "Costo Total:";
             // 
@@ -137,9 +160,9 @@
             this.lblCantidadBoleto.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadBoleto.Location = new System.Drawing.Point(22, 66);
             this.lblCantidadBoleto.Name = "lblCantidadBoleto";
-            this.lblCantidadBoleto.Size = new System.Drawing.Size(133, 14);
+            this.lblCantidadBoleto.Size = new System.Drawing.Size(59, 14);
             this.lblCantidadBoleto.TabIndex = 6;
-            this.lblCantidadBoleto.Text = "Cantidad de Boleto:";
+            this.lblCantidadBoleto.Text = "Boletos:";
             // 
             // lblFecha
             // 
@@ -151,24 +174,15 @@
             this.lblFecha.TabIndex = 3;
             this.lblFecha.Text = "Fecha:";
             // 
-            // cbPelicula
-            // 
-            this.cbPelicula.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPelicula.FormattingEnabled = true;
-            this.cbPelicula.Location = new System.Drawing.Point(99, 23);
-            this.cbPelicula.Name = "cbPelicula";
-            this.cbPelicula.Size = new System.Drawing.Size(455, 22);
-            this.cbPelicula.TabIndex = 1;
-            // 
             // lblPelicula
             // 
             this.lblPelicula.AutoSize = true;
             this.lblPelicula.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPelicula.Location = new System.Drawing.Point(22, 26);
             this.lblPelicula.Name = "lblPelicula";
-            this.lblPelicula.Size = new System.Drawing.Size(59, 14);
+            this.lblPelicula.Size = new System.Drawing.Size(71, 14);
             this.lblPelicula.TabIndex = 0;
-            this.lblPelicula.Text = "Pelicula:";
+            this.lblPelicula.Text = "Cartelera:";
             // 
             // groupBox2
             // 
@@ -294,7 +308,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblFecha;
-        private System.Windows.Forms.ComboBox cbPelicula;
         private System.Windows.Forms.Label lblPelicula;
         private System.Windows.Forms.Label lblCantidadBoleto;
         private System.Windows.Forms.TextBox txtCostoTotal;
@@ -312,5 +325,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

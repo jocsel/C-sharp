@@ -37,6 +37,8 @@ namespace Presentacion
             {
                 MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+
+            
         }
         public void actualizarSucursal()
         {

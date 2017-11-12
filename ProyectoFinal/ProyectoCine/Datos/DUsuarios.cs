@@ -29,19 +29,25 @@ namespace Datos
                     datosUsuario.Id = leer.GetInt32(0);
 
                     if (leer.IsDBNull(1))
-                        datosUsuario.Nombre_Usuario = null;
+                        datosUsuario.Nombre = null;
                     else
-                        datosUsuario.Nombre_Usuario = leer.GetString(1);
+                        datosUsuario.Nombre = leer.GetString(1);
 
                     if (leer.IsDBNull(2))
-                        datosUsuario.Contraseña = null;
+                        datosUsuario.Nombre_Usuario = null;
                     else
-                        datosUsuario.Contraseña = leer.GetString(2);
+                        datosUsuario.Nombre_Usuario = leer.GetString(2);
+
 
                     if (leer.IsDBNull(3))
+                        datosUsuario.Contraseña = null;
+                    else
+                        datosUsuario.Contraseña = leer.GetString(3);
+
+                    if (leer.IsDBNull(4))
                         datosUsuario.Tipo_De_Usuario = null;
                     else
-                        datosUsuario.Tipo_De_Usuario = leer.GetString(3);
+                        datosUsuario.Tipo_De_Usuario = leer.GetString(4);
 
                     listaUsuarios.Add(datosUsuario);
 
@@ -63,6 +69,7 @@ namespace Datos
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "INSERTAR_USUARIO";
+                comando.Parameters.AddWithValue("@Nombre", nuevoUsuario.Nombre_Usuario);
                 comando.Parameters.AddWithValue("@Nombre_Usuario",nuevoUsuario.Nombre_Usuario);
                 comando.Parameters.AddWithValue("@Contraseña",nuevoUsuario.Contraseña);
                 comando.Parameters.AddWithValue("@Tipo_De_Usuario",nuevoUsuario.Tipo_De_Usuario);
@@ -87,6 +94,7 @@ namespace Datos
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "ACTUALIZAR_USUARIO";
                 comando.Parameters.AddWithValue("@Id",modificarUsuario.Id);
+                comando.Parameters.AddWithValue("@Nombre_Apellido", modificarUsuario.Nombre);
                 comando.Parameters.AddWithValue("@Nombre_Usuario",modificarUsuario.Nombre_Usuario);
                 comando.Parameters.AddWithValue("@Contraseña",modificarUsuario.Contraseña);
                 comando.Parameters.AddWithValue("@Tipo_De_Usuario",modificarUsuario.Tipo_De_Usuario);

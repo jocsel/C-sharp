@@ -35,11 +35,11 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
-            this.lblnombreusuario = new System.Windows.Forms.Label();
+            this.lblnombreapellido = new System.Windows.Forms.Label();
             this.lblcontraseña = new System.Windows.Forms.Label();
             this.lbltipousuario = new System.Windows.Forms.Label();
             this.txtxContraseña = new System.Windows.Forms.TextBox();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.txtnombreapellido = new System.Windows.Forms.TextBox();
             this.cbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbFiltrar = new System.Windows.Forms.GroupBox();
@@ -48,6 +48,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.lblusuario = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -131,21 +133,21 @@
             this.dgvUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellClick);
             this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
             // 
-            // lblnombreusuario
+            // lblnombreapellido
             // 
-            this.lblnombreusuario.AutoSize = true;
-            this.lblnombreusuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombreusuario.Location = new System.Drawing.Point(28, 31);
-            this.lblnombreusuario.Name = "lblnombreusuario";
-            this.lblnombreusuario.Size = new System.Drawing.Size(113, 14);
-            this.lblnombreusuario.TabIndex = 4;
-            this.lblnombreusuario.Text = "Nombre Usuario:";
+            this.lblnombreapellido.AutoSize = true;
+            this.lblnombreapellido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreapellido.Location = new System.Drawing.Point(17, 31);
+            this.lblnombreapellido.Name = "lblnombreapellido";
+            this.lblnombreapellido.Size = new System.Drawing.Size(125, 14);
+            this.lblnombreapellido.TabIndex = 4;
+            this.lblnombreapellido.Text = "Nombre y Apellido:";
             // 
             // lblcontraseña
             // 
             this.lblcontraseña.AutoSize = true;
             this.lblcontraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcontraseña.Location = new System.Drawing.Point(350, 31);
+            this.lblcontraseña.Location = new System.Drawing.Point(350, 63);
             this.lblcontraseña.Name = "lblcontraseña";
             this.lblcontraseña.Size = new System.Drawing.Size(86, 14);
             this.lblcontraseña.TabIndex = 5;
@@ -155,7 +157,7 @@
             // 
             this.lbltipousuario.AutoSize = true;
             this.lbltipousuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipousuario.Location = new System.Drawing.Point(28, 66);
+            this.lbltipousuario.Location = new System.Drawing.Point(350, 31);
             this.lbltipousuario.Name = "lbltipousuario";
             this.lbltipousuario.Size = new System.Drawing.Size(90, 14);
             this.lbltipousuario.TabIndex = 6;
@@ -164,20 +166,20 @@
             // txtxContraseña
             // 
             this.txtxContraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtxContraseña.Location = new System.Drawing.Point(442, 28);
+            this.txtxContraseña.Location = new System.Drawing.Point(449, 60);
             this.txtxContraseña.Name = "txtxContraseña";
             this.txtxContraseña.PasswordChar = '*';
             this.txtxContraseña.Size = new System.Drawing.Size(157, 22);
             this.txtxContraseña.TabIndex = 7;
             // 
-            // txtNombreUsuario
+            // txtnombreapellido
             // 
-            this.txtNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombreUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(147, 28);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(168, 22);
-            this.txtNombreUsuario.TabIndex = 8;
+            this.txtnombreapellido.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtnombreapellido.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombreapellido.Location = new System.Drawing.Point(143, 28);
+            this.txtnombreapellido.Name = "txtnombreapellido";
+            this.txtnombreapellido.Size = new System.Drawing.Size(188, 22);
+            this.txtnombreapellido.TabIndex = 8;
             // 
             // cbTipoUsuario
             // 
@@ -186,18 +188,20 @@
             this.cbTipoUsuario.Items.AddRange(new object[] {
             "Admin",
             "Empleado"});
-            this.cbTipoUsuario.Location = new System.Drawing.Point(147, 63);
+            this.cbTipoUsuario.Location = new System.Drawing.Point(449, 28);
             this.cbTipoUsuario.Name = "cbTipoUsuario";
-            this.cbTipoUsuario.Size = new System.Drawing.Size(168, 22);
+            this.cbTipoUsuario.Size = new System.Drawing.Size(157, 22);
             this.cbTipoUsuario.TabIndex = 9;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblnombreusuario);
+            this.groupBox1.Controls.Add(this.lblusuario);
+            this.groupBox1.Controls.Add(this.txtNombreUsuario);
+            this.groupBox1.Controls.Add(this.lblnombreapellido);
             this.groupBox1.Controls.Add(this.cbTipoUsuario);
             this.groupBox1.Controls.Add(this.lblcontraseña);
             this.groupBox1.Controls.Add(this.txtxContraseña);
-            this.groupBox1.Controls.Add(this.txtNombreUsuario);
+            this.groupBox1.Controls.Add(this.txtnombreapellido);
             this.groupBox1.Controls.Add(this.lbltipousuario);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 47);
@@ -271,6 +275,25 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
+            // txtNombreUsuario
+            // 
+            this.txtNombreUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.Location = new System.Drawing.Point(143, 60);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(188, 22);
+            this.txtNombreUsuario.TabIndex = 10;
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.Location = new System.Drawing.Point(17, 63);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(60, 14);
+            this.lblusuario.TabIndex = 11;
+            this.lblusuario.Text = "Usuario:";
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,11 +331,11 @@
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.DataGridView dgvUsuario;
-        private System.Windows.Forms.Label lblnombreusuario;
+        private System.Windows.Forms.Label lblnombreapellido;
         private System.Windows.Forms.Label lblcontraseña;
         private System.Windows.Forms.Label lbltipousuario;
         private System.Windows.Forms.TextBox txtxContraseña;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.TextBox txtnombreapellido;
         private System.Windows.Forms.ComboBox cbTipoUsuario;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox gbFiltrar;
@@ -321,5 +344,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label lblusuario;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
     }
 }

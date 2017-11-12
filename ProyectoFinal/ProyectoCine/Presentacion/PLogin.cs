@@ -42,6 +42,7 @@ namespace Presentacion
                 EUsuario logusuario = new EUsuario();
                 logusuario.Nombre_Usuario = txtusuario.Text;
                 logusuario.Contraseña = txtcontrasena.Text;
+               
                 NUsuario gesusuario = new NUsuario();
                 //gesusuario.logeo(logusuario);
 
@@ -50,11 +51,27 @@ namespace Presentacion
 
                 if (tabla.Rows.Count > 0)
                 {
-                    logusuario.Nombre_Usuario = tabla.Rows[0][0].ToString();
-                    logusuario.Contraseña = tabla.Rows[0][1].ToString();
-                    FrmInicio inicio = new FrmInicio();
                     this.Hide();
-                    inicio.Show();
+
+                    if (tabla.Rows[0][1].ToString()=="Admin")
+                    {
+                        logusuario.Nombre_Usuario = tabla.Rows[0][0].ToString();
+                        logusuario.Contraseña = tabla.Rows[0][1].ToString();
+                        FrmInicio inicio = new FrmInicio();                      
+                        inicio.tipousuario =  tabla.Rows[0][1].ToString();
+
+                        inicio.Show();
+                    }
+                    else if (tabla.Rows[0][1].ToString() == "Empleado")
+                    {
+                        logusuario.Nombre_Usuario = tabla.Rows[0][0].ToString();
+                        logusuario.Contraseña = tabla.Rows[0][1].ToString();
+                        
+                        FrmInicio inicio = new FrmInicio();
+                        inicio.tipousuario = tabla.Rows[0][1].ToString();
+                        inicio.Show();
+                    }
+                    
                     
                 }
                 else

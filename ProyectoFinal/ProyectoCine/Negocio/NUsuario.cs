@@ -28,6 +28,8 @@ namespace Negocio
         public void Agregar(EUsuario agregarUsuario)
         {
             try {
+                if (agregarUsuario.Nombre.Length == 0)
+                    throw new ArgumentException("Ingrese el Nombre y Apellido");
                 if (agregarUsuario.Nombre_Usuario.Length == 0)
                     throw new ArgumentException("Ingresa el nombre del usuario");
                 if (agregarUsuario.Contraseña.Length == 0)
@@ -49,6 +51,8 @@ namespace Negocio
         public void Modificar(EUsuario modificarUsuario)
         {
             try {
+                if (modificarUsuario.Nombre.Length == 0)
+                    throw new ArgumentException("Ingrese el Nombre y Apellido");
                 if (modificarUsuario.Nombre_Usuario.Length == 0)
                     throw new ArgumentException("Ingresa el usuario");
                 if (modificarUsuario.Contraseña.Length == 0)

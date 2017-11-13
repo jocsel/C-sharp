@@ -146,3 +146,4 @@ D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Present
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSala.resources
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuario.resources
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmVenta.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.BuscarSuc.resources

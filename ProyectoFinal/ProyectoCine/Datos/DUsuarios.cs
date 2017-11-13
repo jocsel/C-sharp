@@ -69,7 +69,7 @@ namespace Datos
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "INSERTAR_USUARIO";
-                comando.Parameters.AddWithValue("@Nombre", nuevoUsuario.Nombre_Usuario);
+                comando.Parameters.AddWithValue("@Nombre", nuevoUsuario.Nombre);
                 comando.Parameters.AddWithValue("@Nombre_Usuario",nuevoUsuario.Nombre_Usuario);
                 comando.Parameters.AddWithValue("@Contraseña",nuevoUsuario.Contraseña);
                 comando.Parameters.AddWithValue("@Tipo_De_Usuario",nuevoUsuario.Tipo_De_Usuario);

@@ -31,9 +31,11 @@ namespace Negocio
         {
             try
             {
-                if (nuevoSala.IdSucursal.Value == 0)
+                if (nuevoSala.IdSucursal.Id_Sucursal == 0)
                     throw new ArgumentException("Ingrese el sucursal");
-                if (nuevoSala.Capacidad.Value == 0 | nuevoSala.Capacidad.Value < 0)
+                if (nuevoSala.nombre.Length == 0)
+                    throw new ArgumentException("Ingrse el nombre de la sala");
+                if (nuevoSala.Capacidad.Value == 0 || nuevoSala.Capacidad.Value < 0)
                     throw new ArgumentException("Ingrese una cantidad valida");
 
                 DSala datossala = new DSala();
@@ -52,8 +54,10 @@ namespace Negocio
         {
             try
             {
-                if (modsala.IdSucursal.Value == 0)
+                if (modsala.IdSucursal.Nombre.Length == 0)
                     throw new ArgumentException("Ingrese un sucursal");
+                if (modsala.nombre.Length == 0)
+                    throw new ArgumentException("Ingrse el nombre de la sala");
                 if (modsala.Capacidad.Value == 0 | modsala.Capacidad.Value < 0)
                     throw new ArgumentException("ingrese una cantidad valida");
 

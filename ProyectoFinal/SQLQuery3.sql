@@ -1,7 +1,10 @@
+--agregue nobre a sala
+
+go
 create database DBCine on primary
 (
 name = Dbcine_fisico,
-filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DBcine.mdf',
+filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DB.PC.2014\DBcine.mdf',
 size = 5mb,
 filegrowth = 2mb
 )
@@ -9,12 +12,14 @@ log on
 
 (
 name = Dbcine_logico,
-filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DBcine.ldf',
+filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DB.PC.2014\DBcine.ldf',
 size = 5mb,
 filegrowth = 2mb
 
 )
+go
 use DBCine
+go
 create table Sucursal
 (
 Id_Sucursal int identity(1,1) primary key not null,
@@ -27,6 +32,7 @@ Direccion nvarchar(60) not null
 create table Sala
 (
 Id_Sala int identity(1,1) primary key not null,
+nombre nvarchar(10) not null,
 Id_Sucursal int  not null references Sucursal,
 Capacidad int not null
 )
@@ -65,6 +71,7 @@ Costo_total money not null
 create table Usuarios
 (
 Id int identity (1,1),
+Nombre_apellido nvarchar (50) not null,
 Nombre_Usuario nvarchar(50) primary key not null,
 Contraseña nvarchar(max) not null,
 Tipo_De_Usuario nvarchar(15) not null
@@ -81,7 +88,7 @@ Tipo_De_Usuario nvarchar(15) not null
 
 
 
-
+go
 CREATE PROC INSERTAR_SUC
 (
 
@@ -97,7 +104,7 @@ VALUES (@Nombre,@Ciudad,@Telefono,@Direccion)
 END
 
 --PROC DE ELIMINAR SUCURSAL
-
+go
 CREATE PROCEDURE ELIMINAR_SUC
 (
 @Id_Sucursal int
@@ -108,7 +115,7 @@ DELETE FROM Sucursal WHERE Id_Sucursal=@Id_Sucursal
 END 
 
 --PROC DE ACTUALIZAR SUCURSAL
-
+go
 CREATE PROCEDURE ACTUALIZAR_SUC
 (
 @Id_Sucursal int,
@@ -123,6 +130,7 @@ UPDATE Sucursal SET Nombre=@Nombre,Ciudad=@Ciudad,Telefono=@Telefono,Direccion=@
 END
 
 --PROC SELECT SUCURSAL
+go
 CREATE PROC BUSCAR_SUCURSAL
 AS 
 BEGIN
@@ -134,19 +142,21 @@ END
 
 
 -----PROC DE INSERTAR SALA
-
+go
 CREATE PROCEDURE INSERTAR_SALA
 (
+@Nombre nvarchar(10),
 @Id_Sucursal int,
 @Capacidad int
 )
 AS 
 BEGIN
-INSERT INTO Sala(Id_Sucursal,Capacidad)
-VALUES(@Id_Sucursal,@Capacidad)
+INSERT INTO Sala(nombre,Id_Sucursal,Capacidad)
+VALUES(@Nombre,@Id_Sucursal,@Capacidad)
 END 
 
 --PROC DE ELIMINAR SALA
+go
 CREATE PROCEDURE ELIMINAR_SALA
 (
 @Id_Sala int
@@ -157,28 +167,32 @@ DELETE FROM Sala WHERE Id_Sala=@Id_Sala
 END
 
 --PROC DE ACTUALIZAR SALA
+go
 CREATE PROCEDURE ACTUALIZAR_SALA
 (
 @Id_Sala int,
+@Nombre nvarchar(10),
 @Id_Sucursal int,
 @Capacidad int
 )
 AS
 BEGIN
-UPDATE Sala SET Id_Sucursal=@Id_Sucursal,Capacidad=@Capacidad WHERE Id_Sala=@Id_Sala
+UPDATE Sala SET nombre=@Nombre,Id_Sucursal=@Id_Sucursal,Capacidad=@Capacidad WHERE Id_Sala=@Id_Sala
 END
 
 --PROC DE BUSCAR
+go
 CREATE PROC BUSCAR_SALA
 AS BEGIN 
-SELECT * FROM Sala
+SELECT sa.Id_Sala,sa.Id_Sucursal,sa.nombre,sa.Capacidad,sc.Nombre,sc.Ciudad,sc.Telefono,sc.Direccion FROM Sala sa
+inner join Sucursal sc on sa.Id_Sucursal=sc.Id_Sucursal
 END
 
 
 
 
 --PROC DE INSERTAR PELICULA
-
+go
 CREATE PROCEDURE INSERTAR_PELI
 (
 
@@ -196,7 +210,7 @@ VALUES (@Nombre,@Genero,@Idioma,@Subtitulo,@Año,@Duracion)
 END
 
 --PROC DE ELIMINAR PELI 
-
+go
 CREATE PROCEDURE ELIMINAR_PELI
 (
 @Id_Pelicula int
@@ -206,6 +220,7 @@ DELETE FROM Pelicula WHERE Id_Pelicula=@Id_Pelicula
 END
 
 --PROC DE ACTUALIZAR PELICULA
+go
 CREATE PROCEDURE ACTUALIZAR_PELI
 (
 @Id_Pelicula int,
@@ -221,6 +236,7 @@ UPDATE Pelicula SET Nombre=@Nombre,Genero=@Genero,Idioma=@Idioma,Subtitulo=@Subt
 END
 
 --PROC DE BUSCAR
+go
 CREATE PROCEDURE BUSCAR_PELI
 AS BEGIN 
 SELECT * FROM Pelicula
@@ -229,7 +245,8 @@ END
 
 
 
---PROC DE INSERTAR CARTELERA 
+--PROC DE INSERTAR CARTELERA
+go 
 CREATE PROCEDURE INSERTAR_CARTELERA
 (
 @Id_Pelicula int,
@@ -243,7 +260,8 @@ INSERT INTO Cartelera (Id_Pelicula,Id_Sala,Fecha,Hora,Valor)
 values (@Id_Pelicula,@Id_Sala,@Fecha,@Hora,@Valor)
 end
 
---PROC DE ELIMINAR  CARTELERA 
+--PROC DE ELIMINAR  CARTELERA
+go 
 CREATE PROCEDURE ELIMINAR_CARTELERA
 (
 @Id_Cartelera int
@@ -253,7 +271,8 @@ AS BEGIN
 DELETE FROM Cartelera WHERE Id_Cartelera=@Id_Cartelera
 END
 
---PRO DE ACTUALIZAR CARTELERA 
+--PRO DE ACTUALIZAR CARTELERA
+go 
 CREATE PROCEDURE ACTUALIZAR_CARTELERA
 (
 @Id_Cartelera int,
@@ -268,6 +287,7 @@ UPDATE Cartelera SET Id_Pelicula=@Id_Pelicula,Id_Sala=@Id_Sala,Fecha=@Fecha,Hora
 END
 
 --PROC DE BUSCAR
+go
 CREATE PROC BUSCAR_CARTELERA
 AS BEGIN 
 SELECT * FROM Cartelera
@@ -276,7 +296,8 @@ END
 
 
 
---PROC DE INSERTAR  VENTAS 
+--PROC DE INSERTAR  VENTAS
+go 
 CREATE PROCEDURE INSERTAR_VENTAS
 (
 
@@ -292,6 +313,7 @@ VALUES (@Id_Cartelera,@Fecha,@Hora,@Num_ticket,@Costo_total)
 END 
 
 --PROC DE BUSCAR
+go
 CREATE PROC BUSCAR_VENTAS
 AS BEGIN 
 SELECT * FROM Venta
@@ -301,21 +323,21 @@ END
 
 
 --PROC DE INSERTAR USAURIO
+go
 CREATE PROC INSERTAR_USUARIO
 (
+@Nombre nvarchar(50),
 @Nombre_Usuario nvarchar(50),
 @Contraseña nvarchar(max),
 @Tipo_De_Usuario nvarchar(15)
 )
 AS BEGIN
-INSERT INTO Usuarios(Nombre_Usuario,Contraseña,Tipo_De_Usuario)
-VALUES (@Nombre_Usuario,@Contraseña,@Tipo_De_Usuario)
+INSERT INTO Usuarios(Nombre_apellido,Nombre_Usuario,Contraseña,Tipo_De_Usuario)
+VALUES (@Nombre,@Nombre_Usuario,@Contraseña,@Tipo_De_Usuario)
 END 
 
 --PROC DE ELIMAR USUARIO
-
-drop proc ELIMINAR_USUARIO
-
+go
 CREATE PROC ELIMINAR_USUARIO 
 (
 @Id nvarchar
@@ -325,28 +347,34 @@ DELETE FROM Usuarios WHERE Id=@Id
 END
 
 --PROC DE ACTUALIZAR
-drop proc ACTUALIZAR_USUARIO
+go
 CREATE PROC ACTUALIZAR_USUARIO
 (
 @Id int,
+@Nombre_Apellido nvarchar(50),
 @Nombre_Usuario nvarchar(50),
 @Contraseña nvarchar(max),
 @Tipo_De_Usuario nvarchar(15)
 )
 AS BEGIN 
-UPDATE Usuarios SET Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario, Nombre_Usuario=@Nombre_Usuario WHERE Id=@Id
+UPDATE Usuarios SET Nombre_apellido=@Nombre_Apellido,Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario, Nombre_Usuario=@Nombre_Usuario WHERE Id=@Id
 END
 
 --PROC DE BUSCAR
+go
 CREATE PROC BUSCAR_USUARIO
 AS BEGIN 
 SELECT * FROM Usuarios
 END
 
-insert into Pelicula values ('2','Scary Movie 2','Parodia','Español Latino','No',2000,'1:30')
-select * from Pelicula
-delete from Pelicula where Id_Pelicula='1' 
-
-update Sucursal set Telefono =84121587 where Id_Sucursal =1
-
-select * from Venta
+--logeo
+go
+create proc logeo
+(
+@usuario nvarchar(50),
+@contraseña nvarchar(max)
+)
+as
+begin
+select * from Usuarios where Nombre_Usuario=@usuario and Contraseña=@contraseña 
+end

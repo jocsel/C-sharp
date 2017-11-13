@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnsucursal = new System.Windows.Forms.Button();
+            this.cbsucursal = new System.Windows.Forms.TextBox();
             this.txtcapacidad = new System.Windows.Forms.TextBox();
-            this.cbsucursal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -40,50 +41,65 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.dgvSala = new System.Windows.Forms.DataGridView();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtcapacidad);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtnombre);
+            this.groupBox1.Controls.Add(this.btnsucursal);
             this.groupBox1.Controls.Add(this.cbsucursal);
+            this.groupBox1.Controls.Add(this.txtcapacidad);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(623, 65);
+            this.groupBox1.Size = new System.Drawing.Size(623, 110);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Sala";
             // 
-            // txtcapacidad
+            // btnsucursal
             // 
-            this.txtcapacidad.Location = new System.Drawing.Point(407, 24);
-            this.txtcapacidad.Name = "txtcapacidad";
-            this.txtcapacidad.Size = new System.Drawing.Size(193, 22);
-            this.txtcapacidad.TabIndex = 3;
+            this.btnsucursal.Location = new System.Drawing.Point(523, 24);
+            this.btnsucursal.Name = "btnsucursal";
+            this.btnsucursal.Size = new System.Drawing.Size(77, 23);
+            this.btnsucursal.TabIndex = 5;
+            this.btnsucursal.Text = "Sucursal";
+            this.btnsucursal.UseVisualStyleBackColor = true;
+            this.btnsucursal.Click += new System.EventHandler(this.btnsucursal_Click);
             // 
             // cbsucursal
             // 
-            this.cbsucursal.FormattingEnabled = true;
-            this.cbsucursal.Location = new System.Drawing.Point(90, 24);
+            this.cbsucursal.Enabled = false;
+            this.cbsucursal.Location = new System.Drawing.Point(88, 24);
             this.cbsucursal.Name = "cbsucursal";
-            this.cbsucursal.Size = new System.Drawing.Size(193, 22);
-            this.cbsucursal.TabIndex = 2;
+            this.cbsucursal.Size = new System.Drawing.Size(429, 22);
+            this.cbsucursal.TabIndex = 4;
+            // 
+            // txtcapacidad
+            // 
+            this.txtcapacidad.Location = new System.Drawing.Point(407, 74);
+            this.txtcapacidad.Name = "txtcapacidad";
+            this.txtcapacidad.Size = new System.Drawing.Size(193, 22);
+            this.txtcapacidad.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(323, 27);
+            this.label2.Location = new System.Drawing.Point(323, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 14);
             this.label2.TabIndex = 1;
@@ -107,7 +123,7 @@
             this.groupBox2.Controls.Add(this.btnmodificar);
             this.groupBox2.Controls.Add(this.btnnuevo);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 119);
+            this.groupBox2.Location = new System.Drawing.Point(12, 188);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(623, 65);
             this.groupBox2.TabIndex = 1;
@@ -167,23 +183,11 @@
             // dgvSala
             // 
             this.dgvSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSala.Location = new System.Drawing.Point(12, 199);
+            this.dgvSala.Location = new System.Drawing.Point(12, 268);
             this.dgvSala.Name = "dgvSala";
             this.dgvSala.Size = new System.Drawing.Size(623, 119);
             this.dgvSala.TabIndex = 2;
             this.dgvSala.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSala_CellClick);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox8.Image = global::Presentacion.Properties.Resources.X;
-            this.pictureBox8.Location = new System.Drawing.Point(620, 0);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(26, 30);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
             // panel2
             // 
@@ -208,11 +212,40 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "SALA";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox8.Image = global::Presentacion.Properties.Resources.X;
+            this.pictureBox8.Location = new System.Drawing.Point(620, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(26, 30);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(88, 74);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(193, 22);
+            this.txtnombre.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(17, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 14);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Nombre:";
+            // 
             // FrmSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 325);
+            this.ClientSize = new System.Drawing.Size(648, 400);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSala);
             this.Controls.Add(this.groupBox2);
@@ -226,9 +259,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,9 +279,12 @@
         private System.Windows.Forms.Button btnmodificar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.TextBox txtcapacidad;
-        private System.Windows.Forms.ComboBox cbsucursal;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnsucursal;
+        private System.Windows.Forms.TextBox cbsucursal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtnombre;
     }
 }

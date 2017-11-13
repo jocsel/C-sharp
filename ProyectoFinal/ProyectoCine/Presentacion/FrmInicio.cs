@@ -177,6 +177,16 @@ namespace Presentacion
             pictureBox4.Image = new Bitmap(Properties.Resources.usuario);
         }
 
+        private void pictureBox10_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox10.Image = new Bitmap(Properties.Resources.salir1);
+        }
+
+        private void pictureBox10_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox10.Image = new Bitmap(Properties.Resources.salir);
+        }
+
       
    
     }

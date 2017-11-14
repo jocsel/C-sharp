@@ -290,7 +290,12 @@ END
 go
 CREATE PROC BUSCAR_CARTELERA
 AS BEGIN 
-SELECT * FROM Cartelera
+SELECT car.Id_Cartelera,car.Id_Pelicula,car.Id_Sala,car.Fecha,car.Hora,car.Valor,
+peli.Nombre,peli.Genero,peli.Idioma,peli.Subtitulo,peli.Año,
+peli.Duracion,sl.nombre,sl.Capacidad 
+FROM Cartelera car
+inner join Pelicula peli on peli.Id_Pelicula=car.Id_Pelicula
+inner join sala sl on sl.Id_Sala=car.Id_Sala 
 END
 
 

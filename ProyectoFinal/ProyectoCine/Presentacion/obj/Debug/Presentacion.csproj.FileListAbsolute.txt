@@ -147,3 +147,8 @@ D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Present
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuario.resources
 D:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmVenta.resources
 F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.BuscarSuc.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarPeli.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarSala.resources
+E:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.BuscarSuc.resources
+E:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarPeli.resources
+E:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarSala.resources

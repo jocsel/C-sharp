@@ -26,7 +26,7 @@ namespace Datos
                 while (leer.Read())
                 {
                     EPelicula datosPeli = new EPelicula();
-                    datosPeli.Id_Pelicula = leer.GetInt32(0);
+                    datosPeli.IdPelicula = leer.GetInt32(0);
 
                     if (leer.IsDBNull(1))
                         datosPeli.Nombre = null;
@@ -96,7 +96,7 @@ namespace Datos
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "ACTUALIZAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula", modificarPelicula.Id_Pelicula);
+                comando.Parameters.AddWithValue("@Id_Pelicula", modificarPelicula.IdPelicula);
                 comando.Parameters.AddWithValue("@Nombre", modificarPelicula.Nombre);
                 comando.Parameters.AddWithValue("@Genero", modificarPelicula.Genero);
                 comando.Parameters.AddWithValue("@Idioma", modificarPelicula.Idioma);
@@ -124,7 +124,7 @@ namespace Datos
                 SqlCommand comando = new SqlCommand();
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "ELIMINAR_PELI";
-                comando.Parameters.AddWithValue("@Id_Pelicula", eliminarPelicula.Id_Pelicula);
+                comando.Parameters.AddWithValue("@Id_Pelicula", eliminarPelicula.IdPelicula);
                 comando.Connection = conexion;
                 conexion.Open();
                 comando.ExecuteNonQuery();

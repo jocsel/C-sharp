@@ -8,12 +8,12 @@ namespace Entidad
 {
     public class EPelicula
     {
-        public int Id_Pelicula { get; set; }
+        public int IdPelicula { get; set; }
         public string Nombre { get; set; }
         public string Genero { get; set; }
         public string Idioma { get; set; }
         public string Subtitulo { get; set; }
         public int? Año { get; set; }
-        public TimeSpan Duracion {get; set; }
+        public TimeSpan? Duracion {get; set; }
     }
 }

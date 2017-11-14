@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnbuscarsala = new System.Windows.Forms.Button();
+            this.txtsala = new System.Windows.Forms.TextBox();
+            this.btnbuscarpeli = new System.Windows.Forms.Button();
+            this.txtpelicula = new System.Windows.Forms.TextBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
@@ -47,10 +51,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.txtpelicula = new System.Windows.Forms.TextBox();
-            this.btnbuscarpeli = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCartelera)).BeginInit();
@@ -60,8 +60,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnbuscarsala);
+            this.groupBox1.Controls.Add(this.txtsala);
             this.groupBox1.Controls.Add(this.btnbuscarpeli);
             this.groupBox1.Controls.Add(this.txtpelicula);
             this.groupBox1.Controls.Add(this.txtValor);
@@ -79,6 +79,42 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Cartelera";
+            // 
+            // btnbuscarsala
+            // 
+            this.btnbuscarsala.Location = new System.Drawing.Point(249, 62);
+            this.btnbuscarsala.Name = "btnbuscarsala";
+            this.btnbuscarsala.Size = new System.Drawing.Size(46, 23);
+            this.btnbuscarsala.TabIndex = 14;
+            this.btnbuscarsala.Text = "Sala";
+            this.btnbuscarsala.UseVisualStyleBackColor = true;
+            this.btnbuscarsala.Click += new System.EventHandler(this.btnbuscarsala_Click);
+            // 
+            // txtsala
+            // 
+            this.txtsala.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsala.Location = new System.Drawing.Point(84, 63);
+            this.txtsala.Name = "txtsala";
+            this.txtsala.Size = new System.Drawing.Size(159, 21);
+            this.txtsala.TabIndex = 13;
+            // 
+            // btnbuscarpeli
+            // 
+            this.btnbuscarpeli.Location = new System.Drawing.Point(533, 28);
+            this.btnbuscarpeli.Name = "btnbuscarpeli";
+            this.btnbuscarpeli.Size = new System.Drawing.Size(67, 23);
+            this.btnbuscarpeli.TabIndex = 12;
+            this.btnbuscarpeli.Text = "Pelicula";
+            this.btnbuscarpeli.UseVisualStyleBackColor = true;
+            this.btnbuscarpeli.Click += new System.EventHandler(this.btnbuscarpeli_Click);
+            // 
+            // txtpelicula
+            // 
+            this.txtpelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpelicula.Location = new System.Drawing.Point(84, 29);
+            this.txtpelicula.Name = "txtpelicula";
+            this.txtpelicula.Size = new System.Drawing.Size(442, 21);
+            this.txtpelicula.TabIndex = 11;
             // 
             // txtValor
             // 
@@ -181,6 +217,7 @@
             this.btnguardar.TabIndex = 14;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btncancelar
             // 
@@ -190,6 +227,7 @@
             this.btncancelar.TabIndex = 13;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btneliminar
             // 
@@ -199,6 +237,7 @@
             this.btneliminar.TabIndex = 12;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
             // btnmodificar
             // 
@@ -208,6 +247,7 @@
             this.btnmodificar.TabIndex = 11;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
+            this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
             // 
             // btnnuevo
             // 
@@ -217,6 +257,7 @@
             this.btnnuevo.TabIndex = 10;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // dgvCartelera
             // 
@@ -225,6 +266,7 @@
             this.dgvCartelera.Name = "dgvCartelera";
             this.dgvCartelera.Size = new System.Drawing.Size(625, 176);
             this.dgvCartelera.TabIndex = 4;
+            this.dgvCartelera.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCartelera_CellClick);
             // 
             // panel2
             // 
@@ -259,40 +301,6 @@
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // txtpelicula
-            // 
-            this.txtpelicula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpelicula.Location = new System.Drawing.Point(84, 29);
-            this.txtpelicula.Name = "txtpelicula";
-            this.txtpelicula.Size = new System.Drawing.Size(442, 21);
-            this.txtpelicula.TabIndex = 11;
-            // 
-            // btnbuscarpeli
-            // 
-            this.btnbuscarpeli.Location = new System.Drawing.Point(533, 28);
-            this.btnbuscarpeli.Name = "btnbuscarpeli";
-            this.btnbuscarpeli.Size = new System.Drawing.Size(67, 23);
-            this.btnbuscarpeli.TabIndex = 12;
-            this.btnbuscarpeli.Text = "Pelicula";
-            this.btnbuscarpeli.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(84, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 21);
-            this.textBox1.TabIndex = 13;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(249, 62);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Sala";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmCartelera
             // 
@@ -340,8 +348,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnbuscarsala;
+        private System.Windows.Forms.TextBox txtsala;
         private System.Windows.Forms.Button btnbuscarpeli;
         private System.Windows.Forms.TextBox txtpelicula;
     }

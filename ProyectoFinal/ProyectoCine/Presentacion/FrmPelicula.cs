@@ -125,7 +125,7 @@ namespace Presentacion
                 if (MessageBox.Show("Seguro de querer eliminar este registro", "Pelicula", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     EPelicula borrar = new EPelicula();
-                    borrar.Id_Pelicula = Convert.ToInt32(txtnombre.Tag);
+                    borrar.IdPelicula = Convert.ToInt32(txtnombre.Tag);
                     NPelicula gestionPeli = new NPelicula();
                     gestionPeli.Eliminar(borrar);
                     Limpiar();
@@ -148,7 +148,7 @@ namespace Presentacion
                 if (modificar)
                 {
                     EPelicula modPelicula = new EPelicula();
-                    modPelicula.Id_Pelicula = Convert.ToInt32(txtnombre.Tag.ToString());
+                    modPelicula.IdPelicula = Convert.ToInt32(txtnombre.Tag.ToString());
                     modPelicula.Nombre = txtnombre.Text;
                     modPelicula.Genero = txtgenero.Text;
                     modPelicula.Idioma = txtidioma.Text;

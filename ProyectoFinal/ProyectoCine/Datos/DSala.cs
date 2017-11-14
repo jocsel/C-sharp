@@ -33,6 +33,7 @@ namespace Datos
                 infoSalas.IdSala = read.GetInt32(0);
               
                  infoSalas.IdSucursal.Id_Sucursal = read.GetInt32(1);
+
                  if (read.IsDBNull(2))
                      infoSalas.nombre = null;
                  else

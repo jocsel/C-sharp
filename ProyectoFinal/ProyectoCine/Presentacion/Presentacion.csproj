@@ -52,6 +52,24 @@
     <Compile Include="BuscarSuc.Designer.cs">
       <DependentUpon>BuscarSuc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBuscarCartelera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarCartelera.Designer.cs">
+      <DependentUpon>FrmBuscarCartelera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarPeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarPeli.Designer.cs">
+      <DependentUpon>FrmBuscarPeli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarSala.Designer.cs">
+      <DependentUpon>FrmBuscarSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCartelera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +122,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BuscarSuc.resx">
       <DependentUpon>BuscarSuc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarCartelera.resx">
+      <DependentUpon>FrmBuscarCartelera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarPeli.resx">
+      <DependentUpon>FrmBuscarPeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarSala.resx">
+      <DependentUpon>FrmBuscarSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCartelera.resx">
       <DependentUpon>FrmCartelera.cs</DependentUpon>

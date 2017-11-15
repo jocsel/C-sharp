@@ -65,5 +65,20 @@ namespace Presentacion
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvPelicula_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

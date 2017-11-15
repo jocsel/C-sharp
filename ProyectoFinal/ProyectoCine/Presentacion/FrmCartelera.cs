@@ -94,7 +94,7 @@ namespace Presentacion
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -178,7 +178,7 @@ namespace Presentacion
                     agregarcarte.agregarCartelera(datosCarte);
                     MessageBox.Show("Se guardo correctamente", "Cartelera", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                }
+                    }
                actualizarcartelera();
                 
                 Limpiar();
@@ -274,7 +274,7 @@ namespace Presentacion
                 txtpelicula.Tag = Convert.ToInt32(dgvCartelera.Rows[e.RowIndex].Cells["IdPelicula"].Value.ToString());
                 txtsala.Tag = dgvCartelera.Rows[e.RowIndex].Cells["IdSala"].Value.ToString();
                 dtpFecha.Text = dgvCartelera.Rows[e.RowIndex].Cells["Fecha"].Value.ToString();
-               dtpHora.Text = dgvCartelera.Rows[e.RowIndex].Cells["Hora"].Value.ToString();
+                dtpHora.Text = dgvCartelera.Rows[e.RowIndex].Cells["Hora"].Value.ToString();
                 txtValor.Text = dgvCartelera.Rows[e.RowIndex].Cells["Valor"].Value.ToString();
                 txtpelicula.Text = dgvCartelera.Rows[e.RowIndex].Cells["Pelicula"].Value.ToString();
                 txtsala.Text = dgvCartelera.Rows[e.RowIndex].Cells["Sala"].Value.ToString();

@@ -97,6 +97,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(10, 359);
             this.panel3.TabIndex = 9;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel4
             // 
@@ -119,6 +120,7 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filtrar";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter_1);
             // 
             // lblNombrep
             // 
@@ -162,6 +164,7 @@
             this.dgvPelicula.Name = "dgvPelicula";
             this.dgvPelicula.Size = new System.Drawing.Size(620, 294);
             this.dgvPelicula.TabIndex = 12;
+            this.dgvPelicula.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPelicula_CellContentClick);
             this.dgvPelicula.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPelicula_CellDoubleClick);
             // 
             // FrmBuscarPeli

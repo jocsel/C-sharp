@@ -45,6 +45,7 @@
     <Compile Include="DSala.cs" />
     <Compile Include="DSucursal.cs" />
     <Compile Include="DUsuarios.cs" />
+    <Compile Include="DVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

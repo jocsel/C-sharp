@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.btnCartelera = new System.Windows.Forms.Button();
+            this.txtCartelera = new System.Windows.Forms.TextBox();
+            this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.nudNumTicket = new System.Windows.Forms.NumericUpDown();
             this.lblHora = new System.Windows.Forms.Label();
             this.txtCostoTotal = new System.Windows.Forms.TextBox();
             this.lblContoTotal = new System.Windows.Forms.Label();
@@ -41,8 +41,8 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblPelicula = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnguardar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.dgvVentas = new System.Windows.Forms.DataGridView();
@@ -50,7 +50,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumTicket)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -59,11 +59,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.btnCartelera);
+            this.groupBox1.Controls.Add(this.txtCartelera);
+            this.groupBox1.Controls.Add(this.dtpHora);
+            this.groupBox1.Controls.Add(this.dtpFecha);
+            this.groupBox1.Controls.Add(this.nudNumTicket);
             this.groupBox1.Controls.Add(this.lblHora);
             this.groupBox1.Controls.Add(this.txtCostoTotal);
             this.groupBox1.Controls.Add(this.lblContoTotal);
@@ -78,52 +78,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Venta";
             // 
-            // button2
+            // btnCartelera
             // 
-            this.button2.Location = new System.Drawing.Point(470, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cartelera";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCartelera.Location = new System.Drawing.Point(470, 23);
+            this.btnCartelera.Name = "btnCartelera";
+            this.btnCartelera.Size = new System.Drawing.Size(84, 23);
+            this.btnCartelera.TabIndex = 14;
+            this.btnCartelera.Text = "Cartelera";
+            this.btnCartelera.UseVisualStyleBackColor = true;
+            this.btnCartelera.Click += new System.EventHandler(this.btnCartelera_Click);
             // 
-            // textBox1
+            // txtCartelera
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(112, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(352, 22);
-            this.textBox1.TabIndex = 13;
+            this.txtCartelera.Enabled = false;
+            this.txtCartelera.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCartelera.Location = new System.Drawing.Point(112, 23);
+            this.txtCartelera.Name = "txtCartelera";
+            this.txtCartelera.Size = new System.Drawing.Size(352, 22);
+            this.txtCartelera.TabIndex = 13;
             // 
-            // dateTimePicker2
+            // dtpHora
             // 
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(393, 101);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker2.TabIndex = 12;
+            this.dtpHora.Enabled = false;
+            this.dtpHora.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHora.Location = new System.Drawing.Point(393, 101);
+            this.dtpHora.Name = "dtpHora";
+            this.dtpHora.Size = new System.Drawing.Size(161, 22);
+            this.dtpHora.TabIndex = 12;
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(393, 64);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker1.TabIndex = 11;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dtpFecha.Enabled = false;
+            this.dtpFecha.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFecha.Location = new System.Drawing.Point(393, 64);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(161, 22);
+            this.dtpFecha.TabIndex = 11;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // numericUpDown1
+            // nudNumTicket
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(112, 64);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(179, 22);
-            this.numericUpDown1.TabIndex = 8;
+            this.nudNumTicket.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudNumTicket.Location = new System.Drawing.Point(112, 64);
+            this.nudNumTicket.Name = "nudNumTicket";
+            this.nudNumTicket.Size = new System.Drawing.Size(179, 22);
+            this.nudNumTicket.TabIndex = 8;
             // 
             // lblHora
             // 
@@ -150,7 +151,7 @@
             this.lblContoTotal.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContoTotal.Location = new System.Drawing.Point(22, 104);
             this.lblContoTotal.Name = "lblContoTotal";
-            this.lblContoTotal.Size = new System.Drawing.Size(84, 14);
+            this.lblContoTotal.Size = new System.Drawing.Size(83, 14);
             this.lblContoTotal.TabIndex = 4;
             this.lblContoTotal.Text = "Costo Total:";
             // 
@@ -186,8 +187,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.btnguardar);
+            this.groupBox2.Controls.Add(this.btnGuardar);
+            this.groupBox2.Controls.Add(this.btnImprimir);
             this.groupBox2.Controls.Add(this.btncancelar);
             this.groupBox2.Controls.Add(this.btnnuevo);
             this.groupBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,23 +199,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Funciones";
             // 
-            // button1
+            // btnGuardar
             // 
-            this.button1.Location = new System.Drawing.Point(186, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 28);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(186, 21);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(95, 28);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "Facturar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnguardar
+            // btnImprimir
             // 
-            this.btnguardar.Location = new System.Drawing.Point(317, 21);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(95, 28);
-            this.btnguardar.TabIndex = 14;
-            this.btnguardar.Text = "Imprimir";
-            this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnImprimir.Location = new System.Drawing.Point(317, 21);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(95, 28);
+            this.btnImprimir.TabIndex = 14;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // btncancelar
             // 
@@ -224,6 +226,7 @@
             this.btncancelar.TabIndex = 13;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnnuevo
             // 
@@ -233,6 +236,7 @@
             this.btnnuevo.TabIndex = 10;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = true;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click);
             // 
             // dgvVentas
             // 
@@ -241,7 +245,7 @@
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.Size = new System.Drawing.Size(574, 194);
             this.dgvVentas.TabIndex = 3;
-            this.dgvVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
             // panel1
             // 
@@ -294,7 +298,7 @@
             this.Load += new System.EventHandler(this.FrmVenta_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumTicket)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -312,20 +316,20 @@
         private System.Windows.Forms.Label lblCantidadBoleto;
         private System.Windows.Forms.TextBox txtCostoTotal;
         private System.Windows.Forms.Label lblContoTotal;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudNumTicket;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btncancelar;
         private System.Windows.Forms.Button btnnuevo;
         private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DateTimePicker dtpHora;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCartelera;
+        private System.Windows.Forms.TextBox txtCartelera;
     }
 }

@@ -8,13 +8,13 @@ using Datos;
 
 namespace Negocio
 {
-   public  class NCartelera
+   public class NCartelera
     {
         public List<ECartelera> listacartelera()
         {
         Dcartelera getionardatos = new Dcartelera();
         return getionardatos.ObtenerLista();
-    }
+        }
 
        public void agregarCartelera(ECartelera NewCartelera)
        {

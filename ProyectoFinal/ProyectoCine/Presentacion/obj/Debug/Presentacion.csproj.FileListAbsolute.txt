@@ -204,6 +204,3 @@ E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
-F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
-F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
-F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb

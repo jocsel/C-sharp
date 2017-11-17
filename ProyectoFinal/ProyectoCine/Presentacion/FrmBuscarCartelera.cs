@@ -17,6 +17,7 @@ namespace Presentacion
 
         public string Pelicula;
         public int idcartelera;
+        public decimal val;
         public FrmBuscarCartelera()
         {
             InitializeComponent();
@@ -71,6 +72,7 @@ namespace Presentacion
             {
                 
                 Pelicula = dgvBuscarCartelera.Rows[e.RowIndex].Cells["Pelicula"].Value.ToString();
+                val = Convert.ToDecimal( dgvBuscarCartelera.Rows[e.RowIndex].Cells["valor"].Value.ToString());
                 idcartelera = Convert.ToInt32(dgvBuscarCartelera.Rows[e.RowIndex].Cells["Id_Cartelera"].Value.ToString());
                 DialogResult = DialogResult.OK;
             }
@@ -79,17 +81,6 @@ namespace Presentacion
 
                 throw ex;
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

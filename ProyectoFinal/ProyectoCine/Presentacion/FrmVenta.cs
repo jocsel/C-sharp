@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Entidad;
 using Negocio;
 
+
 namespace Presentacion
 {
     public partial class FrmVenta : Form
@@ -122,17 +123,23 @@ namespace Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int Num = 0;
             
+            decimal total = 0, v = 0;
+            Num = Convert.ToInt32(nudNumTicket.Text);
+            v = Convert.ToDecimal(txtCostoTotal.Text);
+            total = Num * v;
             try {
                 EVenta datosVenta = new EVenta();
-
+                
                 datosVenta.IdCartelera.Id_Cartelera = Convert.ToInt32(txtCartelera.Tag);
                 datosVenta.IdCartelera.Id_Pelicula.Nombre =txtCartelera.Text;
                 datosVenta.Fecha = Convert.ToDateTime(dtpFecha.Text);
                 datosVenta.Hora = TimeSpan.Parse(dtpHora.Text);
                 datosVenta.NumTicket = Convert.ToInt32(nudNumTicket.Text);
-                datosVenta.CostoTotal = Convert.ToDecimal(txtCostoTotal.Text);
-                datosVenta.IdCartelera.valor = Convert.ToDecimal(txtCostoTotal.Tag);
+                datosVenta.CostoTotal = total;//Convert.ToDecimal(txtCostoTotal.Text);
+                datosVenta.IdCartelera.valor = Convert.ToDecimal(txtCostoTotal.Text);
+
                 NVenta agregarVenta = new NVenta();
                 agregarVenta.agregarVenta(datosVenta);
                 MessageBox.Show("Se guardo correctamente", "Venta Realizada",MessageBoxButtons.OK,MessageBoxIcon.Information);
@@ -159,6 +166,7 @@ namespace Presentacion
             if (buscarCartelera.ShowDialog() == DialogResult.OK)
             {
                 txtCartelera.Text = buscarCartelera.Pelicula.ToString();
+                txtCostoTotal.Text = buscarCartelera.val.ToString();
                 txtCartelera.Tag = buscarCartelera.idcartelera.ToString();
 
             }
@@ -174,6 +182,7 @@ namespace Presentacion
             btnImprimir.Enabled = false;
             btnnuevo.Enabled = false;
             txtCartelera.Enabled = false;
+            txtCostoTotal.Enabled = false;
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -189,25 +198,7 @@ namespace Presentacion
 
         private void dgvVentas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
-            if (e.RowIndex >= 0) {
-                txtCartelera.Tag = dgvVentas.Rows[e.RowIndex].Cells["IdVenta"].Value.ToString();
-                txtCartelera.Text = dgvVentas.Rows[e.RowIndex].Cells["IdCartelera"].Value.ToString();
-                txtCostoTotal.Tag = dgvVentas.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
-                txtCostoTotal.Tag = dgvVentas.Rows[e.RowIndex].Cells["Id_Sala"].Value.ToString();
-                dtpFecha.Text = dgvVentas.Rows[e.RowIndex].Cells["Fecha"].Value.ToString();
-                dtpHora.Text = dgvVentas.Rows[e.RowIndex].Cells["Hora"].Value.ToString();
-                nudNumTicket.Tag = dgvVentas.Rows[e.RowIndex].Cells["NumTicket"].Value.ToString();
-                txtCostoTotal.Tag = dgvVentas.Rows[e.RowIndex].Cells["valor"].Value.ToString();
-                txtCostoTotal.Text = dgvVentas.Rows[e.RowIndex].Cells["CostoTotal"].Value.ToString();
-                Deshabilitar();
-            }
-            */
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
     }
 }

@@ -32,6 +32,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtduracion = new System.Windows.Forms.MaskedTextBox();
+            this.txtaño = new System.Windows.Forms.TextBox();
+            this.txtidioma = new System.Windows.Forms.ComboBox();
+            this.txtgenero = new System.Windows.Forms.ComboBox();
             this.txtsubtitulo = new System.Windows.Forms.ComboBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.lblsubtitulo = new System.Windows.Forms.Label();
@@ -50,16 +54,14 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtgenero = new System.Windows.Forms.ComboBox();
-            this.txtidioma = new System.Windows.Forms.ComboBox();
-            this.txtaño = new System.Windows.Forms.TextBox();
-            this.txtduracion = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombrep
@@ -113,6 +115,42 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Peliculas";
+            // 
+            // txtduracion
+            // 
+            this.txtduracion.Location = new System.Drawing.Point(588, 67);
+            this.txtduracion.Mask = "00:00";
+            this.txtduracion.Name = "txtduracion";
+            this.txtduracion.Size = new System.Drawing.Size(174, 22);
+            this.txtduracion.TabIndex = 18;
+            this.txtduracion.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtaño
+            // 
+            this.txtaño.Location = new System.Drawing.Point(73, 67);
+            this.txtaño.Name = "txtaño";
+            this.txtaño.Size = new System.Drawing.Size(174, 22);
+            this.txtaño.TabIndex = 17;
+            // 
+            // txtidioma
+            // 
+            this.txtidioma.FormattingEnabled = true;
+            this.txtidioma.Location = new System.Drawing.Point(585, 32);
+            this.txtidioma.Name = "txtidioma";
+            this.txtidioma.Size = new System.Drawing.Size(177, 22);
+            this.txtidioma.TabIndex = 16;
+            // 
+            // txtgenero
+            // 
+            this.txtgenero.FormattingEnabled = true;
+            this.txtgenero.Items.AddRange(new object[] {
+            "Accion",
+            "Comedia",
+            "Terror"});
+            this.txtgenero.Location = new System.Drawing.Point(330, 32);
+            this.txtgenero.Name = "txtgenero";
+            this.txtgenero.Size = new System.Drawing.Size(171, 22);
+            this.txtgenero.TabIndex = 15;
             // 
             // txtsubtitulo
             // 
@@ -286,6 +324,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -306,41 +345,17 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "PELICULA";
             // 
-            // txtgenero
+            // pictureBox1
             // 
-            this.txtgenero.FormattingEnabled = true;
-            this.txtgenero.Items.AddRange(new object[] {
-            "Accion",
-            "Comedia",
-            "Terror"});
-            this.txtgenero.Location = new System.Drawing.Point(330, 32);
-            this.txtgenero.Name = "txtgenero";
-            this.txtgenero.Size = new System.Drawing.Size(171, 22);
-            this.txtgenero.TabIndex = 15;
-            // 
-            // txtidioma
-            // 
-            this.txtidioma.FormattingEnabled = true;
-            this.txtidioma.Location = new System.Drawing.Point(585, 32);
-            this.txtidioma.Name = "txtidioma";
-            this.txtidioma.Size = new System.Drawing.Size(177, 22);
-            this.txtidioma.TabIndex = 16;
-            // 
-            // txtaño
-            // 
-            this.txtaño.Location = new System.Drawing.Point(73, 67);
-            this.txtaño.Name = "txtaño";
-            this.txtaño.Size = new System.Drawing.Size(174, 22);
-            this.txtaño.TabIndex = 17;
-            // 
-            // txtduracion
-            // 
-            this.txtduracion.Location = new System.Drawing.Point(588, 67);
-            this.txtduracion.Mask = "00:00";
-            this.txtduracion.Name = "txtduracion";
-            this.txtduracion.Size = new System.Drawing.Size(174, 22);
-            this.txtduracion.TabIndex = 18;
-            this.txtduracion.ValidatingType = typeof(System.DateTime);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.minimizar;
+            this.pictureBox1.Location = new System.Drawing.Point(745, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmPelicula
             // 
@@ -366,6 +381,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -398,6 +414,7 @@
         private System.Windows.Forms.ComboBox txtidioma;
         private System.Windows.Forms.ComboBox txtgenero;
         private System.Windows.Forms.MaskedTextBox txtduracion;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

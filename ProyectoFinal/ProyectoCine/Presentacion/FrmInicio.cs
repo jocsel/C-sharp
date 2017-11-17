@@ -187,6 +187,11 @@ namespace Presentacion
             pictureBox10.Image = new Bitmap(Properties.Resources.salir);
         }
 
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
       
    
     }

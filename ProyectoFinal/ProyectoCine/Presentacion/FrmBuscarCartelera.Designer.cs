@@ -32,14 +32,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.dgvBuscarCartelera = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarCartelera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -47,6 +50,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(492, 29);
             this.panel2.TabIndex = 7;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label3
             // 
@@ -80,6 +84,18 @@
             this.dgvBuscarCartelera.TabIndex = 8;
             this.dgvBuscarCartelera.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBuscarCartelera_CellDoubleClick_1);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.minimizar;
+            this.pictureBox1.Location = new System.Drawing.Point(435, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // FrmBuscarCartelera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +112,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarCartelera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +123,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.DataGridView dgvBuscarCartelera;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -30,6 +30,7 @@
         {
             this.dgvSucursal = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtciudad = new System.Windows.Forms.ComboBox();
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.lbldireccion = new System.Windows.Forms.Label();
@@ -46,12 +47,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.txtciudad = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSucursal)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSucursal
@@ -80,6 +82,23 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Sucursal";
+            // 
+            // txtciudad
+            // 
+            this.txtciudad.FormattingEnabled = true;
+            this.txtciudad.Items.AddRange(new object[] {
+            "Managua",
+            "Masaya",
+            "Leon",
+            "Chinandega",
+            "Chontales",
+            "Boaco",
+            "Rivas",
+            "Granada"});
+            this.txtciudad.Location = new System.Drawing.Point(371, 23);
+            this.txtciudad.Name = "txtciudad";
+            this.txtciudad.Size = new System.Drawing.Size(224, 22);
+            this.txtciudad.TabIndex = 9;
             // 
             // txttelefono
             // 
@@ -213,6 +232,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -220,6 +240,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(647, 29);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label1
             // 
@@ -244,22 +265,17 @@
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
             // 
-            // txtciudad
+            // pictureBox1
             // 
-            this.txtciudad.FormattingEnabled = true;
-            this.txtciudad.Items.AddRange(new object[] {
-            "Managua",
-            "Masaya",
-            "Leon",
-            "Chinandega",
-            "Chontales",
-            "Boaco",
-            "Rivas",
-            "Granada"});
-            this.txtciudad.Location = new System.Drawing.Point(371, 23);
-            this.txtciudad.Name = "txtciudad";
-            this.txtciudad.Size = new System.Drawing.Size(224, 22);
-            this.txtciudad.TabIndex = 9;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.minimizar;
+            this.pictureBox1.Location = new System.Drawing.Point(590, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // FrmSucursal
             // 
@@ -282,6 +298,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +324,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txttelefono;
         private System.Windows.Forms.ComboBox txtciudad;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

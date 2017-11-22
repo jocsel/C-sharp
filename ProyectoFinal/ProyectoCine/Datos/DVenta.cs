@@ -83,7 +83,6 @@ namespace Datos
                 comando.Parameters.AddWithValue("@Fecha",nuevaVenta.Fecha);
                 comando.Parameters.AddWithValue("@Hora",nuevaVenta.Hora);
                 comando.Parameters.AddWithValue("@Num_ticket",nuevaVenta.NumTicket);
-               
                 comando.Parameters.AddWithValue("@Costo_total",nuevaVenta.CostoTotal);
                 comando.Connection = conexion;
                 conexion.Open();
@@ -93,27 +92,6 @@ namespace Datos
             }
             catch (Exception ex) {
 
-                throw ex;
-            }
-
-        }
-        private void Calculo(EVenta total)
-        {
-           
-            try
-            {
-                SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
-                SqlCommand comando = new SqlCommand();
-                comando.CommandType = CommandType.StoredProcedure;
-                comando.CommandText = "totalCosto";
-                comando.Parameters.AddWithValue("Costo_total", total.CostoTotal);
-                comando.Connection = conexion;
-                conexion.Open();
-                comando.ExecuteNonQuery();
-                conexion.Close();
-            }
-            catch (Exception ex)
-            {
                 throw ex;
             }
 

@@ -4,7 +4,7 @@ go
 create database DBCine on primary
 (
 name = Dbcine_fisico,
-filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DB.PC.2014\DBcine.mdf',
+filename = 'E:\DBcine.mdf',
 size = 5mb,
 filegrowth = 2mb
 )
@@ -12,7 +12,7 @@ log on
 
 (
 name = Dbcine_logico,
-filename = 'F:\PortableGit\C-sharp\ProyectoFinal\DB.PC.2014\DBcine.ldf',
+filename = 'E:\DBcine.ldf',
 size = 5mb,
 filegrowth = 2mb
 
@@ -20,6 +20,7 @@ filegrowth = 2mb
 go
 use DBCine
 go
+
 create table Sucursal
 (
 Id_Sucursal int identity(1,1) primary key not null,
@@ -33,7 +34,7 @@ create table Sala
 (
 Id_Sala int identity(1,1) primary key not null,
 nombre nvarchar(10) not null,
-Id_Sucursal int  not null references Sucursal,
+Id_Sucursal int  not null references Sucursal on delete cascade,
 Capacidad int not null
 )
 
@@ -51,8 +52,8 @@ Duracion time
 create table Cartelera
 (
 Id_Cartelera int identity (1,1) primary key not null,
-Id_Pelicula int not null references Pelicula,
-Id_Sala int not null references Sala,
+Id_Pelicula int not null references Pelicula on delete cascade,
+Id_Sala int not null references Sala on delete cascade,
 Fecha Date not null,
 Hora time not null,
 Valor money not null
@@ -61,7 +62,7 @@ Valor money not null
 create table Venta
 (
 Id_Venta int identity (1,1) primary key not null,
-Id_Cartelera int not null references Cartelera,
+Id_Cartelera int not null references Cartelera on delete cascade,
 Fecha date not null,
 Hora time not null,
 Num_ticket int not null,
@@ -321,7 +322,10 @@ END
 go
 CREATE PROC BUSCAR_VENTAS
 AS BEGIN 
-SELECT * FROM Venta
+SELECT v.Id_Venta,v.Id_Cartelera,pel.Nombre,Sala.nombre,v.Fecha,v.Hora,v.Num_ticket,car.Valor,v.Costo_total FROM Venta v
+inner join Cartelera car on car.Id_Cartelera=v.Id_Cartelera
+inner join Pelicula pel on pel.Id_Pelicula=car.Id_Pelicula
+inner join Sala on Sala.Id_Sala=car.Id_Sala
 END
 
 
@@ -381,5 +385,68 @@ create proc logeo
 )
 as
 begin
-select * from Usuarios where Nombre_Usuario=@usuario and Contraseña=@contraseña 
+select Nombre_apellido,Tipo_De_Usuario from Usuarios where Nombre_Usuario=@usuario and Contraseña=@contraseña 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+GO
+/****** Object:  Trigger [dbo].[tr_boletosvendidos]    Script Date: 14/11/2017 2:02:56 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
+CREATE TRIGGER tr_boletosvendidos
+   ON  Venta
+   AFTER INSERT
+AS 
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	declare @idventa int
+	declare @idcartelera int 
+	declare @cantidad_ticket int
+	declare @idsala int
+	declare @capacidad int
+
+    -- Insert statements for trigger here
+	select @idventa=Id_Venta,@idcartelera=Id_Cartelera,@cantidad_ticket=Num_ticket from inserted
+	select @idsala = Id_sala from Cartelera where Id_Cartelera=@idcartelera
+	select @capacidad=Capacidad from Sala where Id_Sala=@idsala
+
+	if (select Capacidad from Sala) < 0 
+		print 'Lo siento no hay mas boleto disponible'
+	else
+		update Sala set Capacidad = @capacidad-@cantidad_ticket where Id_Sala=@idsala
+
+
+END
+
+
+
+

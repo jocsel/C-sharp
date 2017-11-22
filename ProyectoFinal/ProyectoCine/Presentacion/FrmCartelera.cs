@@ -125,7 +125,7 @@ namespace Presentacion
             dtpFecha.Text = "";
             dtpHora.Text = "";
         }
-        
+
         private void btnguardar_Click(object sender, EventArgs e)
         {
             try
@@ -308,6 +308,16 @@ namespace Presentacion
 
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

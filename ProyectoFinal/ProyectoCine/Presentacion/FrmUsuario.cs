@@ -15,7 +15,7 @@ namespace Presentacion
     public partial class FrmUsuario : Form
     {
 
-        List<EUsuario> listaUsuarios;
+        /*List<EUsuario> listaUsuarios;
         bool modificar;
         public FrmUsuario()
         {
@@ -25,11 +25,11 @@ namespace Presentacion
             btneliminar.Enabled = false;
             btncancelar.Enabled = false;
             btnguardar.Enabled = false;
-        }
+        }*/
 
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
-            dgvUsuario.AutoResizeColumns();
+           /* dgvUsuario.AutoResizeColumns();
             dgvUsuario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvUsuario.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             
@@ -40,9 +40,9 @@ namespace Presentacion
             catch (Exception ex) {
 
                 MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            }*/
         }
-        public void actualizarListaUsuarios()
+        /*public void actualizarListaUsuarios()
         {
             NUsuario gestionUsuario = new NUsuario();
             listaUsuarios = gestionUsuario.obtenerListaUsuarios();
@@ -55,11 +55,11 @@ namespace Presentacion
                 where Usuarios.Nombre_Usuario.ToUpper().StartsWith(txtFiltrarUsuario.Text.ToUpper())
                 select Usuarios).ToList();
             dgvUsuario.DataSource = busqueda;
-        }
+        }*/
 
         private void txtFiltrarUsuario_TextChanged(object sender, EventArgs e)
         {
-            Filtrar();
+           // Filtrar();
         }
 
         private void btnnuevo_Click(object sender, EventArgs e)
@@ -106,12 +106,12 @@ namespace Presentacion
             btnguardar.Enabled = true;
             btnmodificar.Enabled = false;
             btnnuevo.Enabled = false;
-            modificar = true;
+           // modificar = true;
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            try {
+           /* try {
                 if (MessageBox.Show("Seguro que quieres eliminar este registro", "Usuario", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     EUsuario borrar = new EUsuario();
@@ -128,12 +128,12 @@ namespace Presentacion
             catch (Exception ex) {
 
                 MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            try {
+            /*try {
 
                 if (modificar)
                 {
@@ -175,7 +175,7 @@ namespace Presentacion
             catch (Exception ex) {
 
                 MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)

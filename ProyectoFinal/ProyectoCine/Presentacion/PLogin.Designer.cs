@@ -32,15 +32,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtcontrasena = new System.Windows.Forms.TextBox();
+            this.txtcontraseña = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnlogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -48,8 +48,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -86,24 +86,24 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panel5.Controls.Add(this.txtcontrasena);
+            this.panel5.Controls.Add(this.txtcontraseña);
             this.panel5.Location = new System.Drawing.Point(55, 56);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(178, 31);
             this.panel5.TabIndex = 3;
             // 
-            // txtcontrasena
+            // txtcontraseña
             // 
-            this.txtcontrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcontrasena.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcontrasena.Location = new System.Drawing.Point(3, 3);
-            this.txtcontrasena.Multiline = true;
-            this.txtcontrasena.Name = "txtcontrasena";
-            this.txtcontrasena.PasswordChar = '*';
-            this.txtcontrasena.Size = new System.Drawing.Size(172, 25);
-            this.txtcontrasena.TabIndex = 0;
-            this.txtcontrasena.Tag = "PASSWORD";
-            this.txtcontrasena.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcontraseña.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcontraseña.Location = new System.Drawing.Point(3, 3);
+            this.txtcontraseña.Multiline = true;
+            this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PasswordChar = '*';
+            this.txtcontraseña.Size = new System.Drawing.Size(172, 25);
+            this.txtcontraseña.TabIndex = 0;
+            this.txtcontraseña.Tag = "PASSWORD";
+            this.txtcontraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel6
             // 
@@ -158,6 +158,18 @@
             this.panel1.Size = new System.Drawing.Size(298, 28);
             this.panel1.TabIndex = 7;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.minimizar;
+            this.pictureBox1.Location = new System.Drawing.Point(243, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -180,18 +192,6 @@
             this.pictureBox8.TabIndex = 3;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.minimizar;
-            this.pictureBox1.Location = new System.Drawing.Point(243, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
             // PLogin
             // 
@@ -217,8 +217,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,7 +229,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtcontrasena;
+        private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Panel panel3;

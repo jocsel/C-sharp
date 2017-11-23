@@ -8,10 +8,16 @@ namespace Entidad
 {
     public class EUsuario
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Nombre_Usuario { get; set; }
-        public string Contraseña { get; set; }
-        public string Tipo_De_Usuario { get; set; }
+        public string Usuario { get; set; }
+        public string Password { get; set; }
+        public string Nombres { get; set; }
+        public string Apellido { get; set; }
+
+        public EPermiso Permiso { get; set; }
+
+        public EUsuario()
+        {
+            Permiso = new EPermiso();
+        }
     }
 }

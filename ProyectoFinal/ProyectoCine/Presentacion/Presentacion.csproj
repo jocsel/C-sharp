@@ -112,6 +112,7 @@
     <Compile Include="FrmVenta.Designer.cs">
       <DependentUpon>FrmVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global.cs" />
     <Compile Include="PLogin.cs">
       <SubType>Form</SubType>
     </Compile>

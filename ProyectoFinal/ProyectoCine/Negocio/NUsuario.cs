@@ -11,7 +11,22 @@ namespace Negocio
 {
     public class NUsuario
     {
-        public List<EUsuario> obtenerListaUsuarios()
+
+        public Entidad.EUsuario Login(string usuario, string password)
+        {
+            try
+            {
+                Datos.DLogin logear = new Datos.DLogin();
+                return logear.Login(usuario, password);
+            }
+
+            catch (Exception ex) {
+
+                throw ex;
+            }
+
+        } 
+        /*public List<EUsuario> obtenerListaUsuarios()
         {
             try {
 
@@ -101,6 +116,6 @@ namespace Negocio
                 throw ex;
             }
 
-        }
+        }*/
     }
 }

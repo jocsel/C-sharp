@@ -30,8 +30,16 @@ namespace Presentacion
 
         private void FrmInicio_Load(object sender, EventArgs e)
         {
-           
-            if(tipousuario=="Empleado")
+            lblUsuario.Text = Global.usuarioSesion.Nombres;
+            pictureBox1.Enabled = Global.usuarioSesion.Permiso.Sucursal; 
+            pictureBox6.Enabled = Global.usuarioSesion.Permiso.Sala; //SE BLOQUEA JUNTO CON PELICULA
+            pictureBox5.Enabled = Global.usuarioSesion.Permiso.Pelicula; 
+            pictureBox2.Enabled = Global.usuarioSesion.Permiso.Cartelera; 
+            pictureBox3.Enabled = Global.usuarioSesion.Permiso.Venta; 
+            pictureBox4.Enabled = Global.usuarioSesion.Permiso.User; 
+            pictureBox10.Enabled = Global.usuarioSesion.Permiso.Salir;  
+            
+                /* if(tipousuario=="Empleado")
             {
                
                 pictureBox1.Enabled = false;
@@ -39,11 +47,7 @@ namespace Presentacion
                 pictureBox2.Enabled = false;
                 pictureBox5.Enabled = false;
                 pictureBox4.Enabled = false;
-            }
-           
-            
-         
-
+            }*/
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)

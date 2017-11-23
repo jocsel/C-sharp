@@ -62,3 +62,11 @@ E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
 E:\Github\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\obj\Debug\Datos.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll.config
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Datos.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Datos\bin\Debug\Entidad.pdb

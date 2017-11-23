@@ -208,3 +208,29 @@ F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Prese
 F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
 F:\Nueva carpeta\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
 E:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarCartelera.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe.config
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.exe
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.BuscarSuc.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarCartelera.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarPeli.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarSala.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmCartelera.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmInicio.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmPelicula.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSala.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmSucursal.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuario.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmVenta.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.PLogin.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.Cache
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.exe
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Presentacion.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.dll
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
+F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb

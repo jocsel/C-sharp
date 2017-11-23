@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ECartelera.cs" />
     <Compile Include="EPelicula.cs" />
+    <Compile Include="EPermiso.cs" />
     <Compile Include="ESala.cs" />
     <Compile Include="ESucursal.cs" />
     <Compile Include="EUsuario.cs" />

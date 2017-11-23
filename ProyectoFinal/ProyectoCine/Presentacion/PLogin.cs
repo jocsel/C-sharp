@@ -37,7 +37,24 @@ namespace Presentacion
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
-        {try
+        {
+
+            try {
+                Negocio.NUsuario gestion = new NUsuario();
+                Entidad.EUsuario usuario = gestion.Login(txtusuario.Text, txtcontraseña.Text);
+                if (usuario.Nombres != null) {
+                    Global.usuarioSesion = usuario;
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario incorrecto");
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            /*try
             {
                 EUsuario logusuario = new EUsuario();
                 logusuario.Nombre_Usuario = txtusuario.Text;
@@ -82,7 +99,7 @@ namespace Presentacion
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
             
         }
 

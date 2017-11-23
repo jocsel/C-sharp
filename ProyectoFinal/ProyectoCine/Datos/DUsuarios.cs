@@ -11,7 +11,7 @@ namespace Datos
 {
     public class DUsuarios
     {
-        public List<EUsuario> obtenerListaUsuario()
+        /*public List<EUsuario> obtenerListaUsuario()
         {
             try {
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
@@ -62,7 +62,7 @@ namespace Datos
             }
         }
 
-        public void Agregar(EUsuario nuevoUsuario)
+        /*public void Agregar(EUsuario nuevoUsuario)
         {
             try {
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
@@ -83,9 +83,9 @@ namespace Datos
                 throw ex;
 
             }
-        }
+        }*/
 
-        public void Modificar(EUsuario modificarUsuario)
+        /*public void Modificar(EUsuario modificarUsuario)
         {
             try {
 
@@ -109,9 +109,9 @@ namespace Datos
                 throw ex;
             }
 
-        }
+        }*/
 
-        public void Eliminar(EUsuario eliminarUsuario)
+        /*public void Eliminar(EUsuario eliminarUsuario)
         {
             try {
                 SqlConnection conexion = new SqlConnection(Properties.Settings.Default.CadenaConexion);
@@ -129,9 +129,9 @@ namespace Datos
 
             }
 
-        }
+        }*/
 
-        public DataTable log (EUsuario logeando)
+        /*public DataTable log (EUsuario logeando)
         {
             try
             {
@@ -155,7 +155,7 @@ namespace Datos
                 throw ex;
             }
 
-        }
+        }*/
 
 
     }

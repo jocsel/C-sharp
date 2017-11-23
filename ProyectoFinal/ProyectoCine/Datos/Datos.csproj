@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dcartelera.cs" />
+    <Compile Include="DLogin.cs" />
     <Compile Include="DPelicula.cs" />
     <Compile Include="DSala.cs" />
     <Compile Include="DSucursal.cs" />

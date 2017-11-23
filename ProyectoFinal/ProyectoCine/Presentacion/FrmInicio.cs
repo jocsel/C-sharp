@@ -37,7 +37,7 @@ namespace Presentacion
             pictureBox2.Enabled = Global.usuarioSesion.Permiso.Cartelera; 
             pictureBox3.Enabled = Global.usuarioSesion.Permiso.Venta; 
             pictureBox4.Enabled = Global.usuarioSesion.Permiso.User; 
-            pictureBox10.Enabled = Global.usuarioSesion.Permiso.Salir;  
+           // pictureBox10.Enabled = Global.usuarioSesion.Permiso.Salir;  
             
                 /* if(tipousuario=="Empleado")
             {

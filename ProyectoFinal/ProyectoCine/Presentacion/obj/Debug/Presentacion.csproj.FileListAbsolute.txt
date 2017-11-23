@@ -234,3 +234,5 @@ F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Datos.pdb
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Entidad.pdb
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\bin\Debug\Negocio.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmBuscarCartelera.resources
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Presentacion\obj\Debug\Presentacion.FrmUsuarioo.resources

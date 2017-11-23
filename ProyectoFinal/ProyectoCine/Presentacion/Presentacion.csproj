@@ -100,11 +100,11 @@
     <Compile Include="FrmSucursal.Designer.cs">
       <DependentUpon>FrmSucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsuario.cs">
+    <Compile Include="FrmUsuarioo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <Compile Include="FrmUsuarioo.Designer.cs">
+      <DependentUpon>FrmUsuarioo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVenta.cs">
       <SubType>Form</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="FrmSucursal.resx">
       <DependentUpon>FrmSucursal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUsuarioo.resx">
+      <DependentUpon>FrmUsuarioo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmventa.resx">
       <DependentUpon>FrmVenta.cs</DependentUpon>

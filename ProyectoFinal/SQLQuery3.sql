@@ -4,7 +4,7 @@ go
 create database DBCine on primary
 (
 name = Dbcine_fisico,
-filename = 'E:\DBcine.mdf',
+filename = 'f:\DBcine.mdf',
 size = 5mb,
 filegrowth = 2mb
 )
@@ -12,7 +12,7 @@ log on
 
 (
 name = Dbcine_logico,
-filename = 'E:\DBcine.ldf',
+filename = 'f:\DBcine.ldf',
 size = 5mb,
 filegrowth = 2mb
 
@@ -69,19 +69,28 @@ Num_ticket int not null,
 Costo_total money not null
 )
 
-create table Usuarios
+CREATE TABLE Usuarios
 (
-Id int identity (1,1),
-Nombre_apellido nvarchar (50) not null,
-Nombre_Usuario nvarchar(50) primary key not null,
-Contraseña nvarchar(max) not null,
-Tipo_De_Usuario nvarchar(15) not null
+	Usuario nvarchar (100) primary key NOT NULL,
+	Password nvarchar (max) NULL,
+	 Nombre nvarchar(100) NULL,
+	Apellido nvarchar(100) NULL
 )
 
 
+CREATE TABLE Permiso
+(
+	Usuario nvarchar(100) NULL,
+	Sucursal bit NULL,
+	Sala bit NULL,
+	Pelicula bit NULL,
+	Cartelera bit  NULL,
+	Venta bit NULL,
+	usuarios bit NULL,
+	Password bit NULL
+) 
 
-
-
+GO
 
 
 
@@ -329,64 +338,6 @@ inner join Sala on Sala.Id_Sala=car.Id_Sala
 END
 
 
-
-
---PROC DE INSERTAR USAURIO
-go
-CREATE PROC INSERTAR_USUARIO
-(
-@Nombre nvarchar(50),
-@Nombre_Usuario nvarchar(50),
-@Contraseña nvarchar(max),
-@Tipo_De_Usuario nvarchar(15)
-)
-AS BEGIN
-INSERT INTO Usuarios(Nombre_apellido,Nombre_Usuario,Contraseña,Tipo_De_Usuario)
-VALUES (@Nombre,@Nombre_Usuario,@Contraseña,@Tipo_De_Usuario)
-END 
-
---PROC DE ELIMAR USUARIO
-go
-CREATE PROC ELIMINAR_USUARIO 
-(
-@Id nvarchar
-)
-AS BEGIN
-DELETE FROM Usuarios WHERE Id=@Id
-END
-
---PROC DE ACTUALIZAR
-go
-CREATE PROC ACTUALIZAR_USUARIO
-(
-@Id int,
-@Nombre_Apellido nvarchar(50),
-@Nombre_Usuario nvarchar(50),
-@Contraseña nvarchar(max),
-@Tipo_De_Usuario nvarchar(15)
-)
-AS BEGIN 
-UPDATE Usuarios SET Nombre_apellido=@Nombre_Apellido,Contraseña=@Contraseña,Tipo_De_Usuario=@Tipo_De_Usuario, Nombre_Usuario=@Nombre_Usuario WHERE Id=@Id
-END
-
---PROC DE BUSCAR
-go
-CREATE PROC BUSCAR_USUARIO
-AS BEGIN 
-SELECT * FROM Usuarios
-END
-
---logeo
-go
-create proc logeo
-(
-@usuario nvarchar(50),
-@contraseña nvarchar(max)
-)
-as
-begin
-select Nombre_apellido,Tipo_De_Usuario from Usuarios where Nombre_Usuario=@usuario and Contraseña=@contraseña 
-end
 
 
 

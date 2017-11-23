@@ -15,7 +15,7 @@ namespace Entidad
         public bool Cartelera { get; set; }
         public bool Venta { get; set; }
         public bool User { get; set; }
-        public bool Salir { get; set; }
+        //public bool Salir { get; set; }
 
     }
 }

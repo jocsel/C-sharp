@@ -42,3 +42,4 @@ F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Entidad\bin\Debug\Entidad.pdb
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Entidad\obj\Debug\Entidad.dll
 F:\Github\10.1\C-sharp\ProyectoFinal\ProyectoCine\Entidad\obj\Debug\Entidad.pdb
+F:\PortableGit\C-sharp\ProyectoFinal\ProyectoCine\Entidad\obj\Debug\Entidad.csprojResolveAssemblyReference.cache
